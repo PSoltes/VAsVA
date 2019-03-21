@@ -1,4 +1,4 @@
-package vava.soltesvasko.lezeckastena.jpaentities;
+package vava.soltesvasko.lezeckastena.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
