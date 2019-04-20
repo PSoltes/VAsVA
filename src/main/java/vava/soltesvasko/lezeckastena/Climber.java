@@ -1,6 +1,9 @@
 package vava.soltesvasko.lezeckastena;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerator;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.Data;
 import lombok.Setter;
 
@@ -11,6 +14,7 @@ import java.util.Set;
 
 @Entity
 @Data
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Climber {
     @Id
     @GeneratedValue
@@ -28,7 +32,7 @@ public class Climber {
     private String status;
     @OneToMany(mappedBy = "setter")
     private Set<Problem> setProblems;
-    @JsonManagedReference
+    //@JsonManagedReference
     @OneToMany(mappedBy = "climber", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ClimberProblem> myProblems;
 

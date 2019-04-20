@@ -1,12 +1,12 @@
 package vava.soltesvasko.lezeckastena;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.*;
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -15,13 +15,13 @@ public class ClimberProblem {
     @EmbeddedId
     ClimberProblemKey id;
 
-    @JsonBackReference
+    //@JsonBackReference
     @ManyToOne
     @MapsId("climber_id")
     @JoinColumn(name="climber_id")
     Climber climber;
 
-    @JsonManagedReference
+    //@JsonManagedReference
     @ManyToOne
     @MapsId("problem_id")
     @JoinColumn(name="problem_id")
