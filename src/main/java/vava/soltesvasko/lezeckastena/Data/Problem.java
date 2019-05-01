@@ -1,18 +1,14 @@
-package vava.soltesvasko.lezeckastena;
+package vava.soltesvasko.lezeckastena.Data;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.Data;
 import lombok.Setter;
-import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
-import java.util.Date;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Data

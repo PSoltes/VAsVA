@@ -1,14 +1,10 @@
-package vava.soltesvasko.lezeckastena;
+package vava.soltesvasko.lezeckastena.Data;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.fasterxml.jackson.annotation.ObjectIdGenerator;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.Data;
-import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -35,6 +31,16 @@ public class Climber {
     //@JsonManagedReference
     @OneToMany(mappedBy = "climber", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ClimberProblem> myProblems;
+    @ElementCollection
+    @CollectionTable(name = "pictures", joinColumns = @JoinColumn(name = "user_id"))
+    @Column(name = "pictures")
+    private List<String> myImages;
+    @JoinTable(name = "climber_role", joinColumns = {
+            @JoinColumn(name = "user_id", referencedColumnName = "id")}, inverseJoinColumns = {
+            @JoinColumn(name = "role_id", referencedColumnName = "id")})
+    @ManyToMany(fetch = FetchType.EAGER)
+    private List<Role> roles;
+
 
     public Climber(){}
 
@@ -60,4 +66,15 @@ public class Climber {
     public Long getId() {
         return this.id;
     }
+    public String getPassword() {
+        return this.password;
+    }
+    public String getEmail() {
+        return this.email;
+    }
+    public List<Role> getRoles()
+    {
+        return this.roles;
+    }
+
 }

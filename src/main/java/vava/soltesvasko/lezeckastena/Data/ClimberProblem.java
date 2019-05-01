@@ -1,12 +1,10 @@
-package vava.soltesvasko.lezeckastena;
+package vava.soltesvasko.lezeckastena.Data;
 
-import com.fasterxml.jackson.annotation.*;
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Data

@@ -1,4 +1,4 @@
-package vava.soltesvasko.lezeckastena;
+package vava.soltesvasko.lezeckastena.Data;
 
 import lombok.Data;
 import lombok.NonNull;
