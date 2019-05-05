@@ -29,4 +29,19 @@ public class HomeController {
         return problemList;
     }
 
+    @GetMapping(value = "/problems", produces = "application/json")
+    public List<Problem> getProblems() {
+        return repository.findAll();
+    }
+
+    @GetMapping(value = "/problem/{numericId:[\\d]+}", produces = "application/json")
+    public Problem getProblem(@PathVariable long numericId) {
+        return repository.findById(numericId).orElse(null);
+    }
+
+    @GetMapping(value = "/climbers", produces = "application/json")
+    public List<Climber> getClimbers() {
+        return cRepo.findAll();
+    }
+
 }
