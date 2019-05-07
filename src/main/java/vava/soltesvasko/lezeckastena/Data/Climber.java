@@ -3,6 +3,8 @@ package vava.soltesvasko.lezeckastena.Data;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.Data;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.persistence.*;
 import java.util.List;
@@ -41,6 +43,7 @@ public class Climber {
     @ManyToMany(fetch = FetchType.EAGER)
     private List<Role> roles;
 
+    private static final Logger logger = LoggerFactory.getLogger(Climber.class);
 
     public Climber(){}
 
@@ -57,25 +60,35 @@ public class Climber {
         this.grade = grade;
         this.nickname = nickname;
         this.status = status;
+
+        logger.trace("Creating new Climber.");
     }
 
     public void setMyProblems(List<ClimberProblem> myProblems) {
+        logger.trace(String.format("Setting problems list for climber (%d)", this.id));
         this.myProblems = myProblems;
     }
 
-    public void addMyProblems(ClimberProblem cp) { this.myProblems.add(cp); }
+    public void addMyProblems(ClimberProblem cp) {
+        logger.trace("Adding problems to climber problems.");
+        this.myProblems.add(cp);
+    }
 
     public Long getId() {
+        logger.trace(String.format("Getting id (%d).", this.id));
         return this.id;
     }
     public String getPassword() {
+        logger.trace(String.format("Getting password for climber (%d).", this.id));
         return this.password;
     }
     public String getEmail() {
+        logger.trace(String.format("Getting email for climber (%d).", this.id));
         return this.email;
     }
     public List<Role> getRoles()
     {
+        logger.trace(String.format("Getting roles for climber (%d).", this.id));
         return this.roles;
     }
 

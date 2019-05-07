@@ -2,6 +2,8 @@ package vava.soltesvasko.lezeckastena.Data;
 
 import lombok.Data;
 import lombok.NonNull;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -22,10 +24,15 @@ public class ClimberProblemKey implements Serializable {
 
     ClimberProblemKey(){}
 
+    private static final Logger logger = LoggerFactory.getLogger(ClimberProblemKey.class);
+
+
     ClimberProblemKey(long problemId, long climberId)
     {
         this.problemId = problemId;
         this.climberId = climberId;
+
+        logger.trace(String.format("Creating new ClimberProblemKey from ids (%d) and (%d).", problemId, climberId));
     }
 
     @Override
