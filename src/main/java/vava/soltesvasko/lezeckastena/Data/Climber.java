@@ -63,6 +63,8 @@ public class Climber {
         this.myProblems = myProblems;
     }
 
+    public void addMyProblems(ClimberProblem cp) { this.myProblems.add(cp); }
+
     public Long getId() {
         return this.id;
     }

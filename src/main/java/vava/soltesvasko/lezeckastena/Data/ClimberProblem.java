@@ -26,18 +26,18 @@ public class ClimberProblem {
     Problem problem;
     @CreatedDate
     private Date startedAt;
+
     private long attempts;
     private boolean finished;
 
     ClimberProblem(){}
 
-    ClimberProblem(Climber climber, Problem problem, long attempts, boolean finished)
+    public ClimberProblem(Climber climber, Problem problem, long attempts, boolean finished)
     {
         this.attempts = attempts;
         this.finished = finished;
-        System.out.println(climber.toString());
-        System.out.println(problem.toString());
+//        System.out.println(climber.toString());
+//        System.out.println(problem.toString());
         this.id = new ClimberProblemKey(problem.getId(), climber.getId());
     }
-
 }
