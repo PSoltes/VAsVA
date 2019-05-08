@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.Data;
 import lombok.Setter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
@@ -35,6 +37,7 @@ public class Problem {
     private long createdAt;
     private String type;
 
+    private static final Logger logger = LoggerFactory.getLogger(Problem.class);
 
     public Problem(){}
 
@@ -46,9 +49,12 @@ public class Problem {
         this.sector = sector;
         this.maximumOverhangDegree = maximumOverhangDegree;
         this.type = type;
+
+        logger.trace("Creating new Climber.");
     }
 
     public Long getId() {
+        logger.trace(String.format("Getting id (%d).", this.id));
         return id;
     }
 }
