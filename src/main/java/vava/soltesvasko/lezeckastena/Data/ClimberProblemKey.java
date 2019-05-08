@@ -20,9 +20,9 @@ public class ClimberProblemKey implements Serializable {
     @NonNull
     private long climberId;
 
-    ClimberProblemKey(){}
+    public ClimberProblemKey(){}
 
-    ClimberProblemKey(long problemId, long climberId)
+    public ClimberProblemKey(long problemId, long climberId)
     {
         this.problemId = problemId;
         this.climberId = climberId;

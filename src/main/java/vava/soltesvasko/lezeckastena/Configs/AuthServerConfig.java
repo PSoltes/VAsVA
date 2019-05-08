@@ -5,8 +5,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.core.annotation.Order;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.token.DefaultToken;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
@@ -23,18 +25,32 @@ import java.util.Arrays;
 
 @Configuration
 @EnableAuthorizationServer
+@Order(100)
 public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 
     @Autowired
     @Qualifier("authenticationManagerBean")
     private AuthenticationManager authenticationManager;
 
+    @Autowired
+    private UserDetailsService myUserDetailsService;
+
+    @Bean
+    public CustomTokenEnhancer customTokenEnhancer()
+    {
+        return new CustomTokenEnhancer();
+    }
+
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer ASEC)
     {
         TokenEnhancerChain enhancerChain = new TokenEnhancerChain();
-        enhancerChain.setTokenEnhancers(Arrays.asList(accessTokenConverter()));
-        ASEC.tokenStore(JWTTokenStore()).authenticationManager(authenticationManager).accessTokenConverter(accessTokenConverter()).tokenEnhancer(enhancerChain);
+        enhancerChain.setTokenEnhancers(Arrays.asList(accessTokenConverter(), customTokenEnhancer()));
+        ASEC.tokenStore(JWTTokenStore())
+                .authenticationManager(authenticationManager)
+                .accessTokenConverter(accessTokenConverter())
+                .tokenEnhancer(enhancerChain)
+                .userDetailsService(myUserDetailsService);
     }
 
     @Override
@@ -42,12 +58,13 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
     {
         ASCA.tokenKeyAccess("permitAll()").checkTokenAccess("isAuthenticated()");
     }
+
     @Override
     public void configure(ClientDetailsServiceConfigurer CDSC) throws Exception
     {
         CDSC.inMemory()
                 .withClient("myClientPassword")
-                .authorizedGrantTypes("password", "refresh_token", "authorization_code")
+                .authorizedGrantTypes("password", "refresh_token")
                 .secret("{noop}secret")
                 .scopes("read")
                 .resourceIds("ids");

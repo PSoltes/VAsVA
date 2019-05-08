@@ -1,6 +1,7 @@
 package vava.soltesvasko.lezeckastena.Data;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.Data;
 
@@ -28,7 +29,6 @@ public class Climber {
     private String status;
     @OneToMany(mappedBy = "setter")
     private Set<Problem> setProblems;
-    //@JsonManagedReference
     @OneToMany(mappedBy = "climber", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ClimberProblem> myProblems;
     @ElementCollection
@@ -40,6 +40,7 @@ public class Climber {
             @JoinColumn(name = "role_id", referencedColumnName = "id")})
     @ManyToMany(fetch = FetchType.EAGER)
     private List<Role> roles;
+    private String profilePicPath;
 
 
     public Climber(){}
@@ -62,7 +63,10 @@ public class Climber {
     public void setMyProblems(List<ClimberProblem> myProblems) {
         this.myProblems = myProblems;
     }
+    public void setMyImages(List<String> myImages){this.myImages = myImages;}
 
+    public List<String> getMyImages() {return this.myImages;}
+    public String getProfilePicPath(){return this.profilePicPath;}
     public Long getId() {
         return this.id;
     }
