@@ -9,17 +9,17 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import vava.soltesvasko.lezeckastena.Data.*;
-<<<<<<< HEAD
+
 import vava.soltesvasko.lezeckastena.DataHelper;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
-=======
+
 
 import javax.swing.text.html.Option;
->>>>>>> 0877523d03c1ed203c0404aa98d5db17a92f2904
+
 import java.util.List;
 import java.util.Optional;
 
@@ -29,20 +29,11 @@ public class ClimberController {
     final Logger logger = LoggerFactory.getLogger(ClimberController.class);
 
     @Autowired
-    ClimberProblemRepository CPRepo;
-    @Autowired
     ClimberRepository climberRepo;
-<<<<<<< HEAD
-    @PersistenceContext
-    EntityManager entityManager;
-=======
-
-    @Autowired
-    ClimberProblemRepository climberProblemsRepo;
 
     @Autowired
     ProblemRepository problemRepo;
->>>>>>> 0877523d03c1ed203c0404aa98d5db17a92f2904
+
 
     @PreAuthorize("hasAuthority('USER')")
     @GetMapping(value = "/climber/{id}", produces = "application/json")
@@ -103,7 +94,7 @@ public class ClimberController {
         }
     }
 
-<<<<<<< HEAD
+
     @PreAuthorize("#id == principal.id")
     @GetMapping(value = "climber/{id}/permissions")
     public ResponseEntity<List<String>> permissions(@PathVariable long id)
@@ -126,7 +117,7 @@ public class ClimberController {
         }
     }
 
-=======
+
     @PreAuthorize("hasAuthority('USER')")
     @GetMapping(value = "/climbers", produces = "application/json")
     public List<Climber> getClimbers() {
@@ -172,5 +163,4 @@ public class ClimberController {
 
         return true;
     }
->>>>>>> 0877523d03c1ed203c0404aa98d5db17a92f2904
 }
