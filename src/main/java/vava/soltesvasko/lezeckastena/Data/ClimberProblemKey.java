@@ -10,6 +10,7 @@ import javax.persistence.Embeddable;
 import java.io.Serializable;
 import java.util.Objects;
 
+// Automaticky generované kľúče na základe problem a climber id
 @Data
 @Embeddable
 public class ClimberProblemKey implements Serializable {

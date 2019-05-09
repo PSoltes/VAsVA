@@ -106,7 +106,9 @@ public class ClimberController {
 
                 ClimberProblem cp = new ClimberProblem(climber, problem, 0, false);
                 climber.addMyProblems(cp);
+//                problemRepo.save(problem);
                 climberRepo.save(climber);
+//                climberProblemsRepo.save(cp);
 
                 logger.info("Problem-Climber relationship added.");
             });
