@@ -52,4 +52,19 @@ public class PictureController {
             return "Upload failed";
         }
     }
+
+    @PostMapping(value="/picture/upload/problem/{id}", consumes={MediaType.MULTIPART_FORM_DATA_VALUE, MediaType.APPLICATION_OCTET_STREAM_VALUE})
+    public ResponseEntity<String> uploadProblemPicture(@RequestPart("file") MultipartFile mf, @PathVariable("id") long id)
+    {
+
+        try {
+            String filename = fs.store(mf, id);
+
+            return ResponseEntity.status(200).body("Upload úspešný");
+
+        }catch(Exception e)
+        {
+            return ResponseEntity.status(500).body("Failed Upload");
+        }
+    }
 }

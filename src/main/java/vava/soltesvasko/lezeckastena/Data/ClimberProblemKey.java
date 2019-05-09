@@ -2,6 +2,7 @@ package vava.soltesvasko.lezeckastena.Data;
 
 import lombok.Data;
 import lombok.NonNull;
+import org.codehaus.jackson.annotate.JsonCreator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,8 +27,7 @@ public class ClimberProblemKey implements Serializable {
 
     private static final Logger logger = LoggerFactory.getLogger(ClimberProblemKey.class);
 
-
-    ClimberProblemKey(long problemId, long climberId)
+    public ClimberProblemKey(long problemId, long climberId)
     {
         this.problemId = problemId;
         this.climberId = climberId;
@@ -45,6 +45,11 @@ public class ClimberProblemKey implements Serializable {
         ClimberProblemKey that = (ClimberProblemKey) o;
         return Objects.equals(climberId, that.climberId) &&
                 Objects.equals(problemId, that.problemId);
+    }
+
+    public Long getProblemId()
+    {
+        return this.problemId;
     }
 
     @Override

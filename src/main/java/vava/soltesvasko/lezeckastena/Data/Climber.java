@@ -1,8 +1,6 @@
 package vava.soltesvasko.lezeckastena.Data;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.*;
 import lombok.Data;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,7 +11,6 @@ import java.util.Set;
 
 @Entity
 @Data
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Climber {
     @Id
     @GeneratedValue
@@ -29,9 +26,11 @@ public class Climber {
     private String grade;
     private String nickname;
     private String status;
-    @OneToMany(mappedBy = "setter")
-    private Set<Problem> setProblems;
+    @OneToMany(mappedBy = "setter", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnoreProperties({"setter", "myClimbers"})
+    private List<Problem> setProblems;
     @OneToMany(mappedBy = "climber", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnoreProperties("climber")
     private List<ClimberProblem> myProblems;
     @ElementCollection
     @CollectionTable(name = "pictures", joinColumns = @JoinColumn(name = "user_id"))
@@ -95,4 +94,76 @@ public class Climber {
         return this.roles;
     }
 
+    public List<ClimberProblem> getMyProblems()
+    {
+        return this.myProblems;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public char getSex() {
+        return sex;
+    }
+
+    public void setSex(char sex) {
+        this.sex = sex;
+    }
+
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

@@ -1,10 +1,15 @@
 package vava.soltesvasko.lezeckastena.Controllers;
 
+import org.hibernate.Session;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.provider.HibernateUtils;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import vava.soltesvasko.lezeckastena.Data.Climber;
+import vava.soltesvasko.lezeckastena.Data.ClimberRepository;
 import vava.soltesvasko.lezeckastena.Data.Problem;
 import vava.soltesvasko.lezeckastena.Data.ProblemRepository;
 
@@ -19,6 +24,23 @@ public class ProblemController {
 
     @Autowired
     ProblemRepository problemRepo;
+    @Autowired
+    ClimberRepository climberRepo;
+
+    @PreAuthorize("hasAuthority('ADMIN')")
+    @PostMapping(value = "/problem")
+    public ResponseEntity<String> createProblem( @RequestParam("name") String name,@RequestParam("grade") String grade,@RequestParam("type") String type, @RequestParam("maximumOverhangDegree") double maximumOverhangDegree, @RequestParam("sector") String sector, @RequestParam("setter") long setter_id, @RequestParam("picturePath") String picturePath)
+    {
+        Optional<Climber> cl = climberRepo.findById(setter_id);
+        if(cl.isPresent()) {
+            Problem problem = problemRepo.save(new Problem(name, grade, sector, maximumOverhangDegree, type, picturePath, cl.get()));
+            problemRepo.flush();
+            return ResponseEntity.status(200).body(problem.getId().toString());
+        }
+
+        return ResponseEntity.status(404).body("SetterNotFound");
+    }
+
     @PreAuthorize("hasAuthority('USER')")
     @GetMapping(value = "/problem/{id}", produces = "application/json")
     public Problem getProblem(@PathVariable long id) {

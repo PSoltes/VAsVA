@@ -7,21 +7,16 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.parameters.P;
 import org.springframework.web.bind.annotation.*;
 import vava.soltesvasko.lezeckastena.Data.*;
-<<<<<<< HEAD
 import vava.soltesvasko.lezeckastena.DataHelper;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.net.http.HttpResponse;
-import java.util.ArrayList;
-=======
-
+import java.util.*;
 import javax.swing.text.html.Option;
->>>>>>> 0877523d03c1ed203c0404aa98d5db17a92f2904
-import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class ClimberController {
@@ -32,17 +27,12 @@ public class ClimberController {
     ClimberProblemRepository CPRepo;
     @Autowired
     ClimberRepository climberRepo;
-<<<<<<< HEAD
-    @PersistenceContext
-    EntityManager entityManager;
-=======
 
     @Autowired
     ClimberProblemRepository climberProblemsRepo;
 
     @Autowired
     ProblemRepository problemRepo;
->>>>>>> 0877523d03c1ed203c0404aa98d5db17a92f2904
 
     @PreAuthorize("hasAuthority('USER')")
     @GetMapping(value = "/climber/{id}", produces = "application/json")
@@ -68,24 +58,51 @@ public class ClimberController {
         logger.debug(String.format("Request body contents: (%s)", updatedClimber.toString()));
 
         Optional<Climber> oldClimber = climberRepo.findById(id);
-
-        if(oldClimber.isPresent())
-        {
-            logger.info("Climber found.");
-
-            oldClimber.map(climber -> {
-                climber = updatedClimber;
-                return climberRepo.save(climber);
-            });
-            
-            logger.info("Climber successfully updated.");
+        Climber oClimber = null;
+        if(oldClimber.isPresent()) {
+            oClimber = oldClimber.get();
+            oClimber.setName(updatedClimber.getName());
+            oClimber.setBio(updatedClimber.getBio());
+            oClimber.setAge(updatedClimber.getAge());
+            oClimber.setSex(updatedClimber.getSex());
+            oClimber.setBio(updatedClimber.getEmail());
+            oClimber.setContact(updatedClimber.getContact());
+            oClimber.setNickname(updatedClimber.getNickname());
+            oClimber.setStatus(updatedClimber.getStatus());
+            climberRepo.save(oClimber);
             return true;
+
         }
-        else
-        {
-            logger.info("Climber not found.");
-            return false;
+        logger.info("Climber not found.");
+
+        return false;
+    }
+
+    @PutMapping(value = "/update/climber/{id}")
+    public boolean updateProblemClimber(@RequestParam("attempts") long attempts, @RequestParam("finished") boolean finished, @RequestParam("problem_id") long problem_id, @PathVariable("id") long id)
+    {
+        ClimberProblem temp = climberProblemsRepo.findClimberProblemById(new ClimberProblemKey(problem_id, id));
+        temp.update(attempts, finished);
+        climberProblemsRepo.save(temp);
+        return true;
+    }
+
+    @DeleteMapping(value = "/climber/{id}/problem/{problem_id}")
+    public ResponseEntity<String> deleteProblem(@PathVariable("id") long id, @PathVariable("problem_id") long problem_id)
+    {
+        Optional<Climber> cl = climberRepo.findById(id);
+        if(cl.isPresent()) {
+            for (ClimberProblem CP : cl.get().getMyProblems()) {
+                if (CP.getId() == problem_id) {
+                    cl.get().getMyProblems().remove(CP);
+                }
+            }
+            ClimberProblem toDelete = climberProblemsRepo.findClimberProblemById(new ClimberProblemKey(problem_id, id));
+            climberProblemsRepo.delete(toDelete);
+
+            return ResponseEntity.status(200).body("problem zmazany");
         }
+        return ResponseEntity.status(404).body("pouzivatel nenajdeny");
     }
 
     @PostMapping(value = "/register")
@@ -103,7 +120,6 @@ public class ClimberController {
         }
     }
 
-<<<<<<< HEAD
     @PreAuthorize("#id == principal.id")
     @GetMapping(value = "climber/{id}/permissions")
     public ResponseEntity<List<String>> permissions(@PathVariable long id)
@@ -126,7 +142,6 @@ public class ClimberController {
         }
     }
 
-=======
     @PreAuthorize("hasAuthority('USER')")
     @GetMapping(value = "/climbers", produces = "application/json")
     public List<Climber> getClimbers() {
@@ -170,5 +185,4 @@ public class ClimberController {
 
         return true;
     }
->>>>>>> 0877523d03c1ed203c0404aa98d5db17a92f2904
 }

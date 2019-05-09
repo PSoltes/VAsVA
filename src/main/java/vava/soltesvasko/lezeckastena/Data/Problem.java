@@ -2,6 +2,7 @@ package vava.soltesvasko.lezeckastena.Data;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.Data;
 import lombok.Setter;
@@ -14,7 +15,6 @@ import java.util.List;
 
 @Entity
 @Data
-@JsonIdentityInfo( generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Problem {
     @Id
     @GeneratedValue
@@ -26,22 +26,23 @@ public class Problem {
     private double maximumOverhangDegree;
     @ManyToOne
     @JoinColumn(name="setter_id", referencedColumnName = "id")
-   // @CreatedBy
+    @JsonIgnoreProperties({"setProblems", "myProblems"})
     private Climber setter;
-    @JsonBackReference
     @OneToMany(mappedBy = "problem", cascade = CascadeType.ALL, orphanRemoval = true)
     @Setter
+    @JsonIgnoreProperties("problem")
     private List<ClimberProblem> myClimbers;
     @Column(name = "created_date", nullable = false, updatable = false)
     @CreatedDate
     private long createdAt;
     private String type;
+    private String picturePath;
 
     private static final Logger logger = LoggerFactory.getLogger(Problem.class);
 
     public Problem(){}
 
-    public Problem(String name, String grade, String sector, double maximumOverhangDegree, String type)
+    public Problem(String name, String grade, String sector, double maximumOverhangDegree, String type, String picturePath, Climber setter)
     {
         super();
         this.name = name;
@@ -49,12 +50,23 @@ public class Problem {
         this.sector = sector;
         this.maximumOverhangDegree = maximumOverhangDegree;
         this.type = type;
-
-        logger.trace("Creating new Climber.");
+        this.picturePath = picturePath;
+        this.setter = setter;
+        logger.trace("Creating new Problem.");
     }
 
     public Long getId() {
         logger.trace(String.format("Getting id (%d).", this.id));
         return id;
     }
+
+    public List<ClimberProblem> getMyClimbers() {
+        return myClimbers;
+    }
+
+    public void setMyClimbers(List<ClimberProblem> myClimbers)
+    {
+        this.myClimbers = myClimbers;
+    }
+
 }

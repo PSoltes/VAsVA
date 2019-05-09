@@ -1,5 +1,6 @@
 package vava.soltesvasko.lezeckastena.Data;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,16 +16,16 @@ public class ClimberProblem {
     @EmbeddedId
     ClimberProblemKey id;
 
-    //@JsonBackReference
     @ManyToOne
     @MapsId("climber_id")
+    @JsonIgnoreProperties({"setProblems", "myProblems"})
     @JoinColumn(name="climber_id")
     Climber climber;
 
-    //@JsonManagedReference
     @ManyToOne
     @MapsId("problem_id")
     @JoinColumn(name="problem_id")
+    @JsonIgnoreProperties({"setter", "myClimbers"})
     Problem problem;
     @CreatedDate
     private Date startedAt;
@@ -45,5 +46,34 @@ public class ClimberProblem {
         this.id = new ClimberProblemKey(problem.getId(), climber.getId());
 
         logger.trace(String.format("Climber problem relation with ids (%d), (%d) created.", climber.getId(), problem.getId()));
+    }
+
+    public void setClimber(Climber climber)
+    {
+        this.climber = climber;
+    }
+
+    public Problem getProblem()
+    {
+        return this.problem;
+    }
+
+    public long getAttempts() {
+        return attempts;
+    }
+
+    public boolean isFinished() {
+        return finished;
+    }
+
+    public Long getId()
+    {
+        return this.id.getProblemId();
+    }
+
+    public void update(long attempts, boolean finished)
+    {
+        this.attempts = attempts;
+        this.finished = finished;
     }
 }
