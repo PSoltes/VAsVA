@@ -3,11 +3,23 @@ package vava.soltesvasko.lezeckastena.Controllers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import vava.soltesvasko.lezeckastena.Data.*;
+<<<<<<< HEAD
+import vava.soltesvasko.lezeckastena.DataHelper;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import java.net.http.HttpResponse;
+import java.util.ArrayList;
+=======
 
 import javax.swing.text.html.Option;
+>>>>>>> 0877523d03c1ed203c0404aa98d5db17a92f2904
 import java.util.List;
 import java.util.Optional;
 
@@ -17,13 +29,20 @@ public class ClimberController {
     final Logger logger = LoggerFactory.getLogger(ClimberController.class);
 
     @Autowired
+    ClimberProblemRepository CPRepo;
+    @Autowired
     ClimberRepository climberRepo;
+<<<<<<< HEAD
+    @PersistenceContext
+    EntityManager entityManager;
+=======
 
     @Autowired
     ClimberProblemRepository climberProblemsRepo;
 
     @Autowired
     ProblemRepository problemRepo;
+>>>>>>> 0877523d03c1ed203c0404aa98d5db17a92f2904
 
     @PreAuthorize("hasAuthority('USER')")
     @GetMapping(value = "/climber/{id}", produces = "application/json")
@@ -40,7 +59,7 @@ public class ClimberController {
             return null;
         }
     }
-
+    //@PreAuthorize("#id == principal.id || hasAuthority('ADMIN')")
     @PutMapping(value="/climber/{id}")
     public boolean updateClimber(@RequestBody Climber updatedClimber, @PathVariable long id)
     {
@@ -58,9 +77,8 @@ public class ClimberController {
                 climber = updatedClimber;
                 return climberRepo.save(climber);
             });
-
+            
             logger.info("Climber successfully updated.");
-
             return true;
         }
         else
@@ -68,9 +86,47 @@ public class ClimberController {
             logger.info("Climber not found.");
             return false;
         }
-
     }
 
+    @PostMapping(value = "/register")
+    public ResponseEntity<String> register(@RequestParam("name") String email, @RequestParam("password") String password, @RequestParam("sex") char sex)
+    {
+        Optional<Climber> checkClimber = climberRepo.findOneByEmail(email);
+
+        if(!checkClimber.isPresent()) {
+            Climber cl = new Climber("", email, "{noop}" + password, "", 0, sex, "", "", "", "");
+            climberRepo.save(cl);
+            return ResponseEntity.status(HttpStatus.OK).body("Registrácia úspešná");        }
+        else
+        {
+            return ResponseEntity.status(403).body("Používateľ už existuje");
+        }
+    }
+
+<<<<<<< HEAD
+    @PreAuthorize("#id == principal.id")
+    @GetMapping(value = "climber/{id}/permissions")
+    public ResponseEntity<List<String>> permissions(@PathVariable long id)
+    {
+        Optional<Climber> cl = climberRepo.findById(id);
+        if(cl.isPresent())
+        {
+            List<Role> roles = cl.get().getRoles();
+            List<String> result = new ArrayList<>();
+
+            for(Role role : roles) {
+                result.add(role.getName());
+            }
+
+            return ResponseEntity.status(200).body(result);
+        }
+        else
+        {
+            return ResponseEntity.status(500).body(new ArrayList<>());
+        }
+    }
+
+=======
     @PreAuthorize("hasAuthority('USER')")
     @GetMapping(value = "/climbers", produces = "application/json")
     public List<Climber> getClimbers() {
@@ -116,4 +172,5 @@ public class ClimberController {
 
         return true;
     }
+>>>>>>> 0877523d03c1ed203c0404aa98d5db17a92f2904
 }

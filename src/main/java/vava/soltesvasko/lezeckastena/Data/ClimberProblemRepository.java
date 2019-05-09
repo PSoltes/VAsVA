@@ -6,5 +6,10 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import vava.soltesvasko.lezeckastena.Data.Climber;
 
+//@Repository
+//public interface ClimberProblemRepository extends JpaRepository<ClimberProblem, Long> { }
+
 @Repository
-public interface ClimberProblemRepository extends JpaRepository<ClimberProblem, Long> { }
+public interface ClimberProblemRepository extends JpaRepository<ClimberProblem, ClimberProblemKey> {
+    public ClimberProblem findClimberProblemById(ClimberProblemKey cp);
+}

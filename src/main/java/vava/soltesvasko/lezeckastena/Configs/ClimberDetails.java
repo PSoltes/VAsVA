@@ -27,7 +27,8 @@ public class ClimberDetails implements UserDetails {
 
         return roles;
     }
-
+    public String getProfilePicPath(){return climber.getProfilePicPath();}
+    public long getId(){return climber.getId();}
     public String getPassword()
     {
         return climber.getPassword();

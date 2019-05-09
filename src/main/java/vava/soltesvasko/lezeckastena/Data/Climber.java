@@ -1,6 +1,7 @@
 package vava.soltesvasko.lezeckastena.Data;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.Data;
 import org.slf4j.Logger;
@@ -31,7 +32,6 @@ public class Climber {
     private String status;
     @OneToMany(mappedBy = "setter")
     private Set<Problem> setProblems;
-    //@JsonManagedReference
     @OneToMany(mappedBy = "climber", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ClimberProblem> myProblems;
     @ElementCollection
@@ -43,6 +43,7 @@ public class Climber {
             @JoinColumn(name = "role_id", referencedColumnName = "id")})
     @ManyToMany(fetch = FetchType.EAGER)
     private List<Role> roles;
+    private String profilePicPath;
 
     private static final Logger logger = LoggerFactory.getLogger(Climber.class);
 
@@ -69,12 +70,14 @@ public class Climber {
         logger.trace(String.format("Setting problems list for climber (%d)", this.id));
         this.myProblems = myProblems;
     }
+    public void setMyImages(List<String> myImages){this.myImages = myImages;}
 
+    public List<String> getMyImages() {return this.myImages;}
+    public String getProfilePicPath(){return this.profilePicPath;}
     public void addMyProblems(ClimberProblem cp) {
         logger.trace("Adding problems to climber problems.");
         this.myProblems.add(cp);
     }
-
     public Long getId() {
         logger.trace(String.format("Getting id (%d).", this.id));
         return this.id;

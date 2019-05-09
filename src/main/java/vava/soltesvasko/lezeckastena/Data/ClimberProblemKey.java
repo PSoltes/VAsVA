@@ -23,7 +23,7 @@ public class ClimberProblemKey implements Serializable {
     @NonNull
     private long climberId;
 
-    ClimberProblemKey(){}
+    public ClimberProblemKey(){}
 
     private static final Logger logger = LoggerFactory.getLogger(ClimberProblemKey.class);
 

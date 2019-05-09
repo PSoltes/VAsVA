@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import vava.soltesvasko.lezeckastena.Data.Climber;
 import vava.soltesvasko.lezeckastena.Data.ClimberRepository;
 
+import java.util.Optional;
+
 @Service
 public class MyUserDetailsService implements UserDetailsService {
 
@@ -14,9 +16,11 @@ public class MyUserDetailsService implements UserDetailsService {
     private ClimberRepository cRepo;
 
     @Override
-    public UserDetails loadUserByUsername(String email)
-    {
-        Climber climber = cRepo.findOneByEmail(email);
-        return new ClimberDetails(climber);
+    public UserDetails loadUserByUsername(String email) {
+        Optional<Climber> climber = cRepo.findOneByEmail(email);
+        if (climber.isPresent()){
+            return new ClimberDetails(climber.get());
+        }
+        return null;
     }
 }
