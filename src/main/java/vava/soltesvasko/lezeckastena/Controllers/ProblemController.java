@@ -16,12 +16,14 @@ import vava.soltesvasko.lezeckastena.Data.ProblemRepository;
 import java.util.List;
 import java.util.Optional;
 
+// Kontrolér na sprostredkovanie problémov, jednak na základe ID problému a
+// jednak všetkých dostupných problémov
 @RestController
 public class ProblemController {
 
     final Logger logger = LoggerFactory.getLogger(ProblemController.class);
 
-
+    // Získanie jedného problému na základe jeho ID
     @Autowired
     ProblemRepository problemRepo;
     @Autowired
@@ -60,6 +62,7 @@ public class ProblemController {
         }
     }
 
+    // Získanie všetkých problémov
     @PreAuthorize("hasAuthority('USER')")
     @GetMapping(value = "/problems", produces = "application/json")
     public List<Problem> getProblems() {

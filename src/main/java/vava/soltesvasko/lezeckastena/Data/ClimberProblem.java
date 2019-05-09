@@ -9,6 +9,8 @@ import org.springframework.data.annotation.CreatedDate;
 import javax.persistence.*;
 import java.util.Date;
 
+// Entita reprezentujúca väzobnú tabuľku pre problémy a ich lezcov. Tým pádom, že obsahuje aj
+// iné dôležité informácie ine je vzťah obsahuje dve many-to-one vzťahy.
 @Entity
 @Data
 public class ClimberProblem {

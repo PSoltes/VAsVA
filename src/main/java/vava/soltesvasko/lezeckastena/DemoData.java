@@ -5,16 +5,15 @@ import org.springframework.stereotype.Component;
 import vava.soltesvasko.lezeckastena.Data.ClimberRepository;
 import vava.soltesvasko.lezeckastena.Data.ProblemRepository;
 
+// Trieda na vygenerovanie skúšobných údajov do databázy
 @Component
 public class DemoData {
-
-
-        @Autowired
+        /*@Autowired
         private ProblemRepository repo;
         @Autowired
         private ClimberRepository cRepo;
 
-       /* @EventListener
+       @EventListener
         public void appReady(ApplicationReadyEvent event) {
                 Climber Palo = new Climber("Pavol Šoltés", "soltes.pavol@gmail.com", "1234", "Som ciciak idem domov cya", 21, 'M', "soltes.pavol@gmail.com", "6a", "PALINO BOOOIII", "Boulder4lyfe" );
                 cRepo.save(Palo);
@@ -34,8 +33,5 @@ public class DemoData {
                 }
                 Palo.setMyProblems(cpList);
                 cRepo.save(Palo);
-
-
-
         }*/
 }

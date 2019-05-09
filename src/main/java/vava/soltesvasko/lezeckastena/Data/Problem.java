@@ -13,6 +13,8 @@ import org.springframework.data.annotation.CreatedDate;
 import javax.persistence.*;
 import java.util.List;
 
+// Entita reprezentujúca Problém, má jeden vzťah many-to-one(jeden vie vytvoriť viac), a jeden
+// one-to-many a problem môže mať viacero lezcov nastavené ako myProblem
 @Entity
 @Data
 public class Problem {

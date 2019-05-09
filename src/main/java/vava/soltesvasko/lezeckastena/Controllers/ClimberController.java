@@ -15,16 +15,19 @@ import vava.soltesvasko.lezeckastena.DataHelper;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.net.http.HttpResponse;
-import java.util.*;
+import java.util.ArrayList;
+
+
 import javax.swing.text.html.Option;
+
+import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class ClimberController {
 
     final Logger logger = LoggerFactory.getLogger(ClimberController.class);
 
-    @Autowired
-    ClimberProblemRepository CPRepo;
     @Autowired
     ClimberRepository climberRepo;
 
@@ -142,6 +145,7 @@ public class ClimberController {
         }
     }
 
+
     @PreAuthorize("hasAuthority('USER')")
     @GetMapping(value = "/climbers", produces = "application/json")
     public List<Climber> getClimbers() {
@@ -177,7 +181,9 @@ public class ClimberController {
 
                 ClimberProblem cp = new ClimberProblem(climber, problem, 0, false);
                 climber.addMyProblems(cp);
+//                problemRepo.save(problem);
                 climberRepo.save(climber);
+//                climberProblemsRepo.save(cp);
 
                 logger.info("Problem-Climber relationship added.");
             });

@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+// Entita reprezentujúca rolu, napr. USER, ADMIN etc.
 @Data
 @Entity
 public class Role {

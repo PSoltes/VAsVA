@@ -9,6 +9,7 @@ import javax.persistence.*;
 import java.util.List;
 import java.util.Set;
 
+// Entita reprezentujúca Lezca
 @Entity
 @Data
 public class Climber {
