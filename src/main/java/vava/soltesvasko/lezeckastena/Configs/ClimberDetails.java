@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 public class ClimberDetails implements UserDetails {
-
+    //Implementácia UserDetail pre lezca, potrebná pre UserDetailsService autorizácie, toto je principal v auth
     private Climber climber;
     public ClimberDetails(Climber climber) {
         this.climber = climber;

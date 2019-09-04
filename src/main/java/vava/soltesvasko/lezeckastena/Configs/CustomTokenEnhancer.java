@@ -13,6 +13,7 @@ public class CustomTokenEnhancer implements TokenEnhancer {
     @Override
     public OAuth2AccessToken enhance(OAuth2AccessToken token, OAuth2Authentication auth)
     {
+        //pridávam id a  profilePic path k tokenu
         ClimberDetails cl = (ClimberDetails) auth.getPrincipal();
         Map<String, Object> id = new HashMap();
         id.put("id", cl.getId());

@@ -167,4 +167,9 @@ public class Climber {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public void setProfilePicPath(String path)
+    {
+        this.profilePicPath = path;
+    }
 }

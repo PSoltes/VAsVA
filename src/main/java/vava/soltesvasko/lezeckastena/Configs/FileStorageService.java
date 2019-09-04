@@ -22,7 +22,7 @@ public class FileStorageService{
     @Autowired
     public FileStorageService()
     {
-        this.path = Paths.get("C:\\Users\\PavolSoltes\\Desktop\\VAsVA\\images").toAbsolutePath().normalize();
+        this.path = Paths.get("C:\\Users\\PavolSoltes\\Desktop\\VAVA_backend\\images").toAbsolutePath().normalize(); //path ku obrázkom
     }
     public String store(MultipartFile file, long id) throws Exception
     {
@@ -37,7 +37,7 @@ public class FileStorageService{
             Path target = path.resolve("images_" + id);
 
                 new File(target.toString()).mkdirs();
-            target = target.resolve(filename);
+            target = target.resolve(filename); //pridame k pathu filename
             Files.copy(file.getInputStream(), target, StandardCopyOption.REPLACE_EXISTING);
 
             return filename;
@@ -47,19 +47,19 @@ public class FileStorageService{
         }
     }
 
-    public Resource loadAsResource(String filename) {
-        try {
-            Path file = this.path.resolve(filename);
-            Resource resource = new UrlResource(file.toUri());
-            if (resource.exists() || resource.isReadable()) {
-                return resource;
-            }
-
-        }
-        catch (MalformedURLException e) {
-        }
-
-        return null;
-    }
+//    public Resource loadAsResource(String filename) {
+//        try {
+//            Path file = this.path.resolve(filename);
+//            Resource resource = new UrlResource(file.toUri());
+//            if (resource.exists() || resource.isReadable()) {
+//                return resource;
+//            }
+//
+//        }
+//        catch (MalformedURLException e) {
+//        }
+//
+//        return null;
+//    }
 
 }

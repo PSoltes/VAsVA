@@ -19,7 +19,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
     @Override
     public void configure(ResourceServerSecurityConfigurer RSSC)
     {
-        RSSC.resourceId("ids").tokenServices(tokenServices);
+        RSSC.resourceId("ids").tokenServices(tokenServices); //id from AuthServer
     }
     public void configure(HttpSecurity http) throws Exception
     {

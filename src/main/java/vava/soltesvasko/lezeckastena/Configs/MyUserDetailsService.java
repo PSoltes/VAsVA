@@ -20,6 +20,7 @@ public class MyUserDetailsService implements UserDetailsService {
         Optional<Climber> climber = cRepo.findOneByEmail(email);
         if (climber.isPresent()){
             return new ClimberDetails(climber.get());
+            //just using my own climber details
         }
         return null;
     }

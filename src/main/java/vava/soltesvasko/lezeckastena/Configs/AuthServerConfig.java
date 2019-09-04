@@ -63,11 +63,11 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
     public void configure(ClientDetailsServiceConfigurer CDSC) throws Exception
     {
         CDSC.inMemory()
-                .withClient("myClientPassword")
+                .withClient("myClientPassword") //client secret
                 .authorizedGrantTypes("password", "refresh_token")
-                .secret("{noop}secret")
+                .secret("{noop}secret") //client secret
                 .scopes("read")
-                .resourceIds("ids");
+                .resourceIds("ids"); //resource server ids, must be same on resource server
     }
 
 

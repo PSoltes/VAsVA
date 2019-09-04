@@ -37,6 +37,7 @@ public class ClimberController {
     @Autowired
     ProblemRepository problemRepo;
 
+    //Získaj informácie o používateľovi
     @PreAuthorize("hasAuthority('USER')")
     @GetMapping(value = "/climber/{id}", produces = "application/json")
     public Climber getClimber(@PathVariable long id) {
@@ -52,14 +53,15 @@ public class ClimberController {
             return null;
         }
     }
-    //@PreAuthorize("#id == principal.id || hasAuthority('ADMIN')")
+    //Aktualizuj údaje o lezcovi
+    @PreAuthorize("#id == principal.id || hasAuthority('ADMIN')")
     @PutMapping(value="/climber/{id}")
     public boolean updateClimber(@RequestBody Climber updatedClimber, @PathVariable long id)
     {
         logger.info("Request for a climber update received.");
         logger.debug(String.format("PUT request for climber update with id (%d) received.", id));
         logger.debug(String.format("Request body contents: (%s)", updatedClimber.toString()));
-
+        //fetchi starého a updatni jeho údaje
         Optional<Climber> oldClimber = climberRepo.findById(id);
         Climber oClimber = null;
         if(oldClimber.isPresent()) {
@@ -72,6 +74,8 @@ public class ClimberController {
             oClimber.setContact(updatedClimber.getContact());
             oClimber.setNickname(updatedClimber.getNickname());
             oClimber.setStatus(updatedClimber.getStatus());
+            oClimber.setGrade(updatedClimber.getGrade());
+            oClimber.setProfilePicPath(updatedClimber.getProfilePicPath());
             climberRepo.save(oClimber);
             return true;
 
@@ -80,7 +84,8 @@ public class ClimberController {
 
         return false;
     }
-
+    //Pridaj problém lezcovi
+    @PreAuthorize("#id == principal.id || hasAuthority('ADMIN')")
     @PutMapping(value = "/update/climber/{id}")
     public boolean updateProblemClimber(@RequestParam("attempts") long attempts, @RequestParam("finished") boolean finished, @RequestParam("problem_id") long problem_id, @PathVariable("id") long id)
     {
@@ -89,17 +94,13 @@ public class ClimberController {
         climberProblemsRepo.save(temp);
         return true;
     }
-
+    @PreAuthorize("#id == principal.id")
     @DeleteMapping(value = "/climber/{id}/problem/{problem_id}")
     public ResponseEntity<String> deleteProblem(@PathVariable("id") long id, @PathVariable("problem_id") long problem_id)
     {
         Optional<Climber> cl = climberRepo.findById(id);
         if(cl.isPresent()) {
-            for (ClimberProblem CP : cl.get().getMyProblems()) {
-                if (CP.getId() == problem_id) {
-                    cl.get().getMyProblems().remove(CP);
-                }
-            }
+            cl.get().getMyProblems().removeIf(CP -> CP.getId() == problem_id);
             ClimberProblem toDelete = climberProblemsRepo.findClimberProblemById(new ClimberProblemKey(problem_id, id));
             climberProblemsRepo.delete(toDelete);
 
@@ -164,7 +165,7 @@ public class ClimberController {
         return null;
     }
 
-    @PreAuthorize("hasAuthority('USER')")
+    @PreAuthorize("hasAuthority('USER') && #climberId == principal.id")
     @PutMapping(value="/add/{climberId}/{problemId}")
     public boolean addProblem(@PathVariable long climberId, @PathVariable long problemId)
     {

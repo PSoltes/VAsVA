@@ -22,7 +22,7 @@ public class LezeckastenaApplication implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/picture/**").addResourceLocations("file:///C:/Users/PavolSoltes/Desktop/VAsVA/images/")
+        registry.addResourceHandler("/picture/**").addResourceLocations("file:///C:/Users/PavolSoltes/Desktop/VAVA_backend/images/")
                 .setCachePeriod(0);
     }
 

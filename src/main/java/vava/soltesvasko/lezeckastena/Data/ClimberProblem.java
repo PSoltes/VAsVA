@@ -15,6 +15,7 @@ import java.util.Date;
 @Data
 public class ClimberProblem {
 
+    //Väzobná entita medzi Problémom a lezcom, potrebná obsahuje počet pokusov a dokončenosť
     @EmbeddedId
     ClimberProblemKey id;
 

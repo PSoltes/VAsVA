@@ -1,0 +1,1051 @@
+2019-09-02 10:30:50,098 DEBUG org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator [background-preinit] Loaded expression factory via original TCCL
+2019-09-02 10:30:50,597 INFO org.springframework.boot.StartupInfoLogger [main] Starting LezeckastenaApplicationTests on DESKTOP-G5P5HPE with PID 6088 (started by Pavol �olt�s in C:\Users\PavolSoltes\Desktop\VAVA_backend\VAsVA)
+2019-09-02 10:30:50,602 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-09-02 10:30:50,605 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-09-02 10:30:54,591 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-02 10:30:54,967 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 303ms. Found 3 repository interfaces.
+2019-09-02 10:30:56,793 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2cdc0c34] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-02 10:30:57,600 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2019-09-02 10:30:58,034 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2019-09-02 10:30:58,223 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-02 10:30:58,559 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.7.Final}
+2019-09-02 10:30:58,648 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2019-09-02 10:30:59,251 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-02 10:31:00,751 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-09-02 10:31:00,799 INFO org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl [main] HHH000422: Disabling contextual LOB creation as connection was null
+2019-09-02 10:31:00,872 INFO org.hibernate.type.BasicTypeRegistry [main] HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@632cf7d3
+2019-09-02 10:31:04,054 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-02 10:31:06,656 WARN org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter [main] Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2019-09-02 10:31:09,579 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-02 10:31:09,821 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-02 10:31:12,244 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c7d675c, org.springframework.security.web.context.SecurityContextPersistenceFilter@c8ed958, org.springframework.security.web.header.HeaderWriterFilter@3ef7fb04, org.springframework.security.web.authentication.logout.LogoutFilter@70680f88, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@e21d73, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6672b0ea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@438a65a7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64836643, org.springframework.security.web.session.SessionManagementFilter@4c941d19, org.springframework.security.web.access.ExceptionTranslationFilter@13edc1bc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@630bd5e7]
+2019-09-02 10:31:12,408 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@3dd27116, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@63218586, org.springframework.security.web.context.SecurityContextPersistenceFilter@5f346355, org.springframework.security.web.header.HeaderWriterFilter@39a1e1e6, org.springframework.security.web.authentication.logout.LogoutFilter@2fafa9bf, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@589a4305, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@66e62e19, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50fe5df2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@341c0dfc, org.springframework.security.web.session.SessionManagementFilter@2daa5092, org.springframework.security.web.access.ExceptionTranslationFilter@5478597, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e2c9e24]
+2019-09-02 10:31:12,448 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3fc7abf6, org.springframework.security.web.context.SecurityContextPersistenceFilter@1d6dc2b8, org.springframework.security.web.header.HeaderWriterFilter@96448ee, org.springframework.security.web.authentication.logout.LogoutFilter@8de8b07, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7b55f0a6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ec75228, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55cf5626, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1016b44e, org.springframework.security.web.session.SessionManagementFilter@59509393, org.springframework.security.web.access.ExceptionTranslationFilter@345af277]
+2019-09-02 10:31:12,825 INFO org.springframework.boot.StartupInfoLogger [main] Started LezeckastenaApplicationTests in 24.049 seconds (JVM running for 61.168)
+2019-09-02 10:31:13,488 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-2] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-02 10:31:13,492 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-2] Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-02 10:31:13,497 INFO com.zaxxer.hikari.HikariDataSource [Thread-2] HikariPool-1 - Shutdown initiated...
+2019-09-02 10:31:13,528 INFO com.zaxxer.hikari.HikariDataSource [Thread-2] HikariPool-1 - Shutdown completed.
+2019-09-02 10:31:33,934 INFO org.springframework.boot.StartupInfoLogger [main] Starting LezeckastenaApplication on DESKTOP-G5P5HPE with PID 12868 (C:\Users\PavolSoltes\Desktop\VAVA_backend\VAsVA\target\classes started by Pavol Šoltés in C:\Users\PavolSoltes\Desktop\VAVA_backend\VAsVA)
+2019-09-02 10:31:33,940 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-09-02 10:31:33,940 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-09-02 10:31:35,684 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-02 10:31:35,861 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 145ms. Found 3 repository interfaces.
+2019-09-02 10:31:36,600 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d2cc747f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-02 10:31:37,405 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2019-09-02 10:31:37,444 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2019-09-02 10:31:37,469 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-09-02 10:31:37,469 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-09-02 10:31:37,486 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk-11.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\libnvvp;C:\Program Files\Microsoft MPI\Bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Bitnami\wampstack-7.1.23-0\php;C:\ProgramData\ComposerSetup\bin;C:\wamp64\bin\php\php7.2.10;C:\Users\PavolSoltes\AppData\Local\Programs\Python\Python37-32;C:\Program Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Java\jdk-11.0.2\bin;C:\Users\PavolSoltes\AppData\Local\Android\Sdk\platform-tools;C:\Ruby25-x64\bin;C:\Users\PavolSoltes\AppData\Local\Microsoft\WindowsApps;C:\Users\Pavol Šoltés\AppData\Roaming\Composer\vendor\bin;C:\Users\Pavol Šoltés\AppData\Local\Programs\MiKTeX 2.9\miktex\bin\x64\;C:\Users\Pavol Šoltés\AppData\Local\Programs\Python\Python37-32;C:\Users\PavolSoltes\AppData\Roaming\npm;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin;;C:\Program Files\JetBrains\PyCharm Community Edition 2018.3.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.4\bin;;C:\Users\PavolSoltes\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\PavolSoltes\AppData\Local\Pandoc\;.]
+2019-09-02 10:31:37,845 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2019-09-02 10:31:37,847 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3792 ms
+2019-09-02 10:31:38,207 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2019-09-02 10:31:38,440 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2019-09-02 10:31:38,621 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-02 10:31:38,791 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.7.Final}
+2019-09-02 10:31:38,794 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2019-09-02 10:31:39,235 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-02 10:31:39,595 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-09-02 10:31:39,628 INFO org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl [main] HHH000422: Disabling contextual LOB creation as connection was null
+2019-09-02 10:31:39,638 INFO org.hibernate.type.BasicTypeRegistry [main] HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@4567fb2b
+2019-09-02 10:31:41,572 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-02 10:31:42,461 WARN org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter [main] Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2019-09-02 10:31:43,185 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-02 10:31:43,253 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-02 10:31:44,085 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48a61e38, org.springframework.security.web.context.SecurityContextPersistenceFilter@70044113, org.springframework.security.web.header.HeaderWriterFilter@270ab7bc, org.springframework.security.web.authentication.logout.LogoutFilter@3810806c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@16f2d883, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4678ec43, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1fb00a6d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52a3eef8, org.springframework.security.web.session.SessionManagementFilter@1d686622, org.springframework.security.web.access.ExceptionTranslationFilter@3b663112, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3777fc44]
+2019-09-02 10:31:44,113 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@1221d607, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4b45c8e4, org.springframework.security.web.context.SecurityContextPersistenceFilter@63053b71, org.springframework.security.web.header.HeaderWriterFilter@68a97fc1, org.springframework.security.web.authentication.logout.LogoutFilter@394950ad, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@51eafec0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4687c184, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65f3f9e2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3dc14f80, org.springframework.security.web.session.SessionManagementFilter@227fc322, org.springframework.security.web.access.ExceptionTranslationFilter@4aadf144, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1a48a582]
+2019-09-02 10:31:44,118 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2bed5828, org.springframework.security.web.context.SecurityContextPersistenceFilter@663e1144, org.springframework.security.web.header.HeaderWriterFilter@3b9a2629, org.springframework.security.web.authentication.logout.LogoutFilter@2041c9a3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@36e358de, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4efa7d2f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24bba1b7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52a2e2fb, org.springframework.security.web.session.SessionManagementFilter@50aa9a91, org.springframework.security.web.access.ExceptionTranslationFilter@400d1c30]
+2019-09-02 10:31:44,243 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2019-09-02 10:31:44,307 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2019-09-02 10:31:44,314 INFO org.springframework.boot.StartupInfoLogger [main] Started LezeckastenaApplication in 11.453 seconds (JVM running for 13.851)
+2019-09-02 11:10:10,959 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-02 11:10:10,975 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2019-09-02 11:10:11,115 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 135 ms
+2019-09-02 11:10:11,845 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [http-nio-8080-exec-1] HHH000397: Using ASTQueryTranslatorFactory
+2019-09-02 11:10:12,687 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting password for climber (26).
+2019-09-02 11:10:12,690 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting roles for climber (26).
+2019-09-02 11:10:12,756 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting roles for climber (26).
+2019-09-02 11:10:12,766 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 11:10:13,504 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 11:10:13,515 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 11:10:13,530 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting id (26).
+2019-09-02 11:10:15,678 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting roles for climber (26).
+2019-09-02 11:10:18,077 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-3] Request for a climber received.
+2019-09-02 11:10:18,080 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-3] GET request for climber with id (26) received.
+2019-09-02 11:10:18,088 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-3] Climber found.
+2019-09-02 11:10:18,142 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting id (26).
+2019-09-02 11:10:18,149 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting email for climber (26).
+2019-09-02 11:10:18,150 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting password for climber (26).
+2019-09-02 11:10:18,260 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting roles for climber (26).
+2019-09-02 11:10:18,541 WARN vava.soltesvasko.lezeckastena.Controllers.LoggingController [http-nio-8080-exec-4] Get ProfileReferenceError: ReferenceError: Can't find variable: stringoflanguagesThis error is located at:    in HomeScreen (at SceneView.js:9)    in SceneView (at StackViewLayout.tsx:899)    in RCTView (at View.js:35)    in View (at StackViewLayout.tsx:898)    in RCTView (at View.js:35)    in View (at StackViewLayout.tsx:897)    in RCTView (at View.js:35)    in View (at createAnimatedComponent.js:151)    in AnimatedComponent (at StackViewCard.tsx:106)    in RCTView (at View.js:35)    in View (at createAnimatedComponent.js:151)    in AnimatedComponent (at screens.native.js:71)    in Screen (at StackViewCard.tsx:93)    in Card (at createPointerEventsContainer.tsx:95)    in Container (at StackViewLayout.tsx:982)    in RCTView (at View.js:35)    in View (at screens.native.js:101)    in ScreenContainer (at StackViewLayout.tsx:394)    in RCTView (at View.js:35)    in View (at createAnimatedComponent.js:151)    in AnimatedComponent (at StackViewLayout.tsx:384)    in PanGestureHandler (at StackViewLayout.tsx:377)    in StackViewLayout (at withOrientation.js:30)    in withOrientation (at StackView.tsx:103)    in RCTView (at View.js:35)    in View (at Transitioner.tsx:267)    in Transitioner (at StackView.tsx:40)    in StackView (at createNavigator.js:81)    in Navigator (at createKeyboardAwareNavigator.js:12)    in KeyboardAwareNavigator (at createAppContainer.js:430)    in NavigationContainer (at App.js:48)    in RCTView (at View.js:35)    in View (at Root.js:14)    in Root (at connectStyle.js:392)    in Styled(Root) (at App.js:47)    in App (at renderApplication.js:40)    in RCTView (at View.js:35)    in View (at AppContainer.js:98)    in RCTView (at View.js:35)    in View (at AppContainer.js:115)    in AppContainer (at renderApplication.js:39)This error is located at:    in NavigationContainer (at App.js:48)    in RCTView (at View.js:35)    in View (at Root.js:14)    in Root (at connectStyle.js:392)    in Styled(Root) (at App.js:47)    in App (at renderApplication.js:40)    in RCTView (at View.js:35)    in View (at AppContainer.js:98)    in RCTView (at View.js:35)    in View (at AppContainer.js:115)    in AppContainer (at renderApplication.js:39)
+2019-09-02 11:18:45,280 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting password for climber (26).
+2019-09-02 11:18:45,387 WARN org.springframework.security.oauth2.provider.endpoint.TokenEndpoint [http-nio-8080-exec-6] Handling error: InvalidGrantException, Bad credentials
+2019-09-02 11:18:59,707 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting password for climber (26).
+2019-09-02 11:18:59,711 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting roles for climber (26).
+2019-09-02 11:18:59,713 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting roles for climber (26).
+2019-09-02 11:18:59,723 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting email for climber (26).
+2019-09-02 11:18:59,730 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting email for climber (26).
+2019-09-02 11:18:59,732 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting email for climber (26).
+2019-09-02 11:18:59,735 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting id (26).
+2019-09-02 11:19:01,433 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting roles for climber (26).
+2019-09-02 11:19:04,284 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-9] Request for a climber received.
+2019-09-02 11:19:04,284 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-9] GET request for climber with id (26) received.
+2019-09-02 11:19:04,289 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-9] Climber found.
+2019-09-02 11:19:04,299 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting id (26).
+2019-09-02 11:19:04,299 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting email for climber (26).
+2019-09-02 11:19:04,299 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting password for climber (26).
+2019-09-02 11:19:04,314 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting roles for climber (26).
+2019-09-02 11:20:43,489 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting password for climber (26).
+2019-09-02 11:20:43,492 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting roles for climber (26).
+2019-09-02 11:20:43,493 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting roles for climber (26).
+2019-09-02 11:20:43,495 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 11:20:43,496 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 11:20:43,498 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 11:20:43,499 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting id (26).
+2019-09-02 11:20:44,940 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting roles for climber (26).
+2019-09-02 11:20:48,094 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-3] Request for a climber received.
+2019-09-02 11:20:48,096 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-3] GET request for climber with id (26) received.
+2019-09-02 11:20:48,104 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-3] Climber found.
+2019-09-02 11:20:48,107 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting id (26).
+2019-09-02 11:20:48,108 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting email for climber (26).
+2019-09-02 11:20:48,111 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting password for climber (26).
+2019-09-02 11:20:48,116 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting roles for climber (26).
+2019-09-02 11:54:54,084 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting password for climber (26).
+2019-09-02 11:54:54,109 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting roles for climber (26).
+2019-09-02 11:54:54,113 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting roles for climber (26).
+2019-09-02 11:54:54,117 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting email for climber (26).
+2019-09-02 11:54:54,131 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting email for climber (26).
+2019-09-02 11:54:54,132 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting email for climber (26).
+2019-09-02 11:54:54,135 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting id (26).
+2019-09-02 11:54:55,762 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting roles for climber (26).
+2019-09-02 11:54:59,954 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-7] Request for a climber received.
+2019-09-02 11:54:59,957 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-7] GET request for climber with id (26) received.
+2019-09-02 11:54:59,985 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-7] Climber found.
+2019-09-02 11:54:59,989 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting id (26).
+2019-09-02 11:54:59,994 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting email for climber (26).
+2019-09-02 11:54:59,995 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting password for climber (26).
+2019-09-02 11:55:00,088 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting roles for climber (26).
+2019-09-02 11:56:44,335 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting password for climber (26).
+2019-09-02 11:56:44,337 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting roles for climber (26).
+2019-09-02 11:56:44,338 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting roles for climber (26).
+2019-09-02 11:56:44,340 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting email for climber (26).
+2019-09-02 11:56:44,342 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting email for climber (26).
+2019-09-02 11:56:44,345 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting email for climber (26).
+2019-09-02 11:56:44,347 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting id (26).
+2019-09-02 11:56:46,064 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting roles for climber (26).
+2019-09-02 11:56:49,130 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-1] Request for a climber received.
+2019-09-02 11:56:49,132 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-1] GET request for climber with id (26) received.
+2019-09-02 11:56:49,140 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-1] Climber found.
+2019-09-02 11:56:49,143 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting id (26).
+2019-09-02 11:56:49,144 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 11:56:49,146 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting password for climber (26).
+2019-09-02 11:56:49,153 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting roles for climber (26).
+2019-09-02 12:00:17,665 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting password for climber (26).
+2019-09-02 12:00:17,665 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting roles for climber (26).
+2019-09-02 12:00:17,665 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting roles for climber (26).
+2019-09-02 12:00:17,665 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting email for climber (26).
+2019-09-02 12:00:17,665 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting email for climber (26).
+2019-09-02 12:00:17,671 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting email for climber (26).
+2019-09-02 12:00:17,671 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting id (26).
+2019-09-02 12:00:18,931 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting roles for climber (26).
+2019-09-02 12:00:21,071 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-5] Request for a climber received.
+2019-09-02 12:00:21,071 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-5] GET request for climber with id (26) received.
+2019-09-02 12:00:21,095 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-5] Climber found.
+2019-09-02 12:00:21,095 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting id (26).
+2019-09-02 12:00:21,095 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting email for climber (26).
+2019-09-02 12:00:21,100 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting password for climber (26).
+2019-09-02 12:00:21,105 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting roles for climber (26).
+2019-09-02 12:07:29,564 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting password for climber (26).
+2019-09-02 12:07:29,590 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting roles for climber (26).
+2019-09-02 12:07:29,592 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting roles for climber (26).
+2019-09-02 12:07:29,597 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting email for climber (26).
+2019-09-02 12:07:29,606 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting email for climber (26).
+2019-09-02 12:07:29,607 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting email for climber (26).
+2019-09-02 12:07:29,609 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting id (26).
+2019-09-02 12:07:31,233 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting roles for climber (26).
+2019-09-02 12:07:34,904 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-9] Request for a climber received.
+2019-09-02 12:07:34,904 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-9] GET request for climber with id (26) received.
+2019-09-02 12:07:34,914 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-9] Climber found.
+2019-09-02 12:07:34,914 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting id (26).
+2019-09-02 12:07:34,914 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting email for climber (26).
+2019-09-02 12:07:34,924 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting password for climber (26).
+2019-09-02 12:07:34,974 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting roles for climber (26).
+2019-09-02 12:08:13,924 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting id (26).
+2019-09-02 14:46:02,117 INFO org.springframework.boot.StartupInfoLogger [main] Starting LezeckastenaApplicationTests on DESKTOP-G5P5HPE with PID 10644 (started by Pavol �olt�s in C:\Users\PavolSoltes\Desktop\VAVA_backend\VAsVA)
+2019-09-02 14:46:02,126 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-09-02 14:46:02,143 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-09-02 14:46:06,046 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-02 14:46:06,342 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 276ms. Found 3 repository interfaces.
+2019-09-02 14:46:07,867 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$62047615] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-02 14:46:08,564 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2019-09-02 14:46:09,303 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2019-09-02 14:46:09,579 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-02 14:46:09,900 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.7.Final}
+2019-09-02 14:46:09,939 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2019-09-02 14:46:10,658 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-02 14:46:12,223 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-09-02 14:46:12,288 INFO org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl [main] HHH000422: Disabling contextual LOB creation as connection was null
+2019-09-02 14:46:12,304 INFO org.hibernate.type.BasicTypeRegistry [main] HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@6dae70f9
+2019-09-02 14:46:14,751 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-02 14:46:18,698 WARN org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter [main] Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2019-09-02 14:46:25,741 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-02 14:46:25,883 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-02 14:46:27,840 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@981d9d2, org.springframework.security.web.context.SecurityContextPersistenceFilter@751b901a, org.springframework.security.web.header.HeaderWriterFilter@2d4f1ddd, org.springframework.security.web.authentication.logout.LogoutFilter@70b0dc92, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@600b3bee, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@943cf5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75f446df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@ad6448e, org.springframework.security.web.session.SessionManagementFilter@151f1734, org.springframework.security.web.access.ExceptionTranslationFilter@63fde7ca, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5b6ec94a]
+2019-09-02 14:46:27,951 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@7568134c, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@28c75c93, org.springframework.security.web.context.SecurityContextPersistenceFilter@50fe5df2, org.springframework.security.web.header.HeaderWriterFilter@5f346355, org.springframework.security.web.authentication.logout.LogoutFilter@43c3354, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@22cf1808, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2fafa9bf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@53fd59d4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@35217e0, org.springframework.security.web.session.SessionManagementFilter@66e62e19, org.springframework.security.web.access.ExceptionTranslationFilter@2daa5092, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@589a4305]
+2019-09-02 14:46:27,967 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@59509393, org.springframework.security.web.context.SecurityContextPersistenceFilter@6bbac73d, org.springframework.security.web.header.HeaderWriterFilter@507fecf3, org.springframework.security.web.authentication.logout.LogoutFilter@345af277, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@96448ee, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e53c6ef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6164b3a2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d6dc2b8, org.springframework.security.web.session.SessionManagementFilter@3f1d4ecf, org.springframework.security.web.access.ExceptionTranslationFilter@7e0b68e5]
+2019-09-02 14:46:28,753 INFO org.springframework.boot.StartupInfoLogger [main] Started LezeckastenaApplicationTests in 28.329 seconds (JVM running for 33.764)
+2019-09-02 14:46:29,202 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-2] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-02 14:46:29,213 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-2] Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-02 14:46:29,221 INFO com.zaxxer.hikari.HikariDataSource [Thread-2] HikariPool-1 - Shutdown initiated...
+2019-09-02 14:46:29,261 INFO com.zaxxer.hikari.HikariDataSource [Thread-2] HikariPool-1 - Shutdown completed.
+2019-09-02 14:46:53,825 INFO org.springframework.boot.StartupInfoLogger [main] Starting LezeckastenaApplication on DESKTOP-G5P5HPE with PID 10712 (C:\Users\PavolSoltes\Desktop\VAVA_backend\VAsVA\target\classes started by Pavol Šoltés in C:\Users\PavolSoltes\Desktop\VAVA_backend\VAsVA)
+2019-09-02 14:46:53,840 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-09-02 14:46:53,842 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-09-02 14:46:55,735 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-02 14:46:55,946 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 192ms. Found 3 repository interfaces.
+2019-09-02 14:46:56,925 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7b413379] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-02 14:46:57,457 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2019-09-02 14:46:57,475 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2019-09-02 14:46:57,491 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-09-02 14:46:57,492 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-09-02 14:46:57,501 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk-11.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\libnvvp;C:\Program Files\Microsoft MPI\Bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Bitnami\wampstack-7.1.23-0\php;C:\ProgramData\ComposerSetup\bin;C:\wamp64\bin\php\php7.2.10;C:\Users\PavolSoltes\AppData\Local\Programs\Python\Python37-32;C:\Program Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Java\jdk-11.0.2\bin;C:\Users\PavolSoltes\AppData\Local\Android\Sdk\platform-tools;C:\Ruby25-x64\bin;C:\Users\PavolSoltes\AppData\Local\Microsoft\WindowsApps;C:\Users\Pavol Šoltés\AppData\Roaming\Composer\vendor\bin;C:\Users\Pavol Šoltés\AppData\Local\Programs\MiKTeX 2.9\miktex\bin\x64\;C:\Users\Pavol Šoltés\AppData\Local\Programs\Python\Python37-32;C:\Users\PavolSoltes\AppData\Roaming\npm;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin;;C:\Program Files\JetBrains\PyCharm Community Edition 2018.3.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.4\bin;;C:\Users\PavolSoltes\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\PavolSoltes\AppData\Local\Pandoc\;.]
+2019-09-02 14:46:57,687 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2019-09-02 14:46:57,688 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3736 ms
+2019-09-02 14:46:57,930 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2019-09-02 14:46:58,096 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2019-09-02 14:46:58,156 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-02 14:46:58,233 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.7.Final}
+2019-09-02 14:46:58,236 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2019-09-02 14:46:58,443 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-02 14:46:58,664 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-09-02 14:46:58,688 INFO org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl [main] HHH000422: Disabling contextual LOB creation as connection was null
+2019-09-02 14:46:58,695 INFO org.hibernate.type.BasicTypeRegistry [main] HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@4c5406b
+2019-09-02 14:46:59,962 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-02 14:47:00,545 WARN org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter [main] Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2019-09-02 14:47:00,950 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-02 14:47:00,981 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-02 14:47:01,592 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50841932, org.springframework.security.web.context.SecurityContextPersistenceFilter@3b399f5a, org.springframework.security.web.header.HeaderWriterFilter@498503cb, org.springframework.security.web.authentication.logout.LogoutFilter@18c26588, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6097f225, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@71806c64, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@614ae4eb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@68fa8ea5, org.springframework.security.web.session.SessionManagementFilter@2809e38a, org.springframework.security.web.access.ExceptionTranslationFilter@d7c4fcb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7054c068]
+2019-09-02 14:47:01,613 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@1e75bef1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@169d5567, org.springframework.security.web.context.SecurityContextPersistenceFilter@1c512bb, org.springframework.security.web.header.HeaderWriterFilter@2b9bbaa8, org.springframework.security.web.authentication.logout.LogoutFilter@128ca7af, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@47e70f54, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d142b53, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3bac86a3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1e489957, org.springframework.security.web.session.SessionManagementFilter@11771fd6, org.springframework.security.web.access.ExceptionTranslationFilter@183a84f4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7841c990]
+2019-09-02 14:47:01,617 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@317fa5dd, org.springframework.security.web.context.SecurityContextPersistenceFilter@236206f8, org.springframework.security.web.header.HeaderWriterFilter@5c2ae7d7, org.springframework.security.web.authentication.logout.LogoutFilter@5a88849, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@36ce0bc2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5c04ec8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@e5f05f8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@477906cf, org.springframework.security.web.session.SessionManagementFilter@6e7cb01a, org.springframework.security.web.access.ExceptionTranslationFilter@25c06894]
+2019-09-02 14:47:01,704 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2019-09-02 14:47:01,752 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2019-09-02 14:47:01,760 INFO org.springframework.boot.StartupInfoLogger [main] Started LezeckastenaApplication in 10.054 seconds (JVM running for 12.992)
+2019-09-02 14:47:19,110 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-02 14:47:19,111 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2019-09-02 14:47:19,123 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 10 ms
+2019-09-02 14:47:19,461 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [http-nio-8080-exec-1] HHH000397: Using ASTQueryTranslatorFactory
+2019-09-02 14:47:19,654 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting password for climber (26).
+2019-09-02 14:47:19,655 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting roles for climber (26).
+2019-09-02 14:47:19,656 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting roles for climber (26).
+2019-09-02 14:47:19,659 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 14:47:19,788 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 14:47:19,790 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 14:47:19,791 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting id (26).
+2019-09-02 14:47:21,528 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting roles for climber (26).
+2019-09-02 14:47:24,681 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-2] Request for a climber received.
+2019-09-02 14:47:24,684 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-2] GET request for climber with id (26) received.
+2019-09-02 14:47:24,694 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-2] Climber found.
+2019-09-02 14:47:24,721 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting id (26).
+2019-09-02 14:47:24,725 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting email for climber (26).
+2019-09-02 14:47:24,726 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting password for climber (26).
+2019-09-02 14:47:24,791 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting roles for climber (26).
+2019-09-02 14:47:54,886 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting id (26).
+2019-09-02 14:48:10,519 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting id (26).
+2019-09-02 14:48:37,818 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting id (26).
+2019-09-02 14:49:17,745 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting password for climber (26).
+2019-09-02 14:49:17,749 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting roles for climber (26).
+2019-09-02 14:49:17,753 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting roles for climber (26).
+2019-09-02 14:49:17,756 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting email for climber (26).
+2019-09-02 14:49:17,762 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting email for climber (26).
+2019-09-02 14:49:17,764 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting email for climber (26).
+2019-09-02 14:49:17,766 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting id (26).
+2019-09-02 14:49:19,321 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting roles for climber (26).
+2019-09-02 14:49:21,368 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-5] Request for a climber received.
+2019-09-02 14:49:21,378 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-5] GET request for climber with id (26) received.
+2019-09-02 14:49:21,388 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-5] Climber found.
+2019-09-02 14:49:21,388 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting id (26).
+2019-09-02 14:49:21,388 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting email for climber (26).
+2019-09-02 14:49:21,388 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting password for climber (26).
+2019-09-02 14:49:21,407 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting roles for climber (26).
+2019-09-02 14:50:13,438 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-6] Request for a climber update received.
+2019-09-02 14:50:13,438 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-6] PUT request for climber update with id (26) received.
+2019-09-02 14:50:13,448 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting id (26).
+2019-09-02 14:50:13,448 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting email for climber (26).
+2019-09-02 14:50:13,448 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting password for climber (26).
+2019-09-02 14:50:13,448 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting roles for climber (26).
+2019-09-02 14:50:13,478 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-6] Request body contents: (Climber(id=26, name=Pavol Šoltés, email=Aa, password={noop}1111, bio=, age=22, sex=M, contact=, grade=8b, nickname=Oalino, status=Marriwd, setProblems=null, myProblems=null, myImages=[IMG_20190815_101016.jpg, IMG_20190901_152511.jpg, IMG_20190831_113233.jpg, IMG_20190815_094521.jpg], roles=[], profilePicPath=null))
+2019-09-02 14:50:13,480 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting email for climber (26).
+2019-09-02 14:50:13,480 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting id (26).
+2019-09-02 18:58:07,528 INFO org.springframework.boot.StartupInfoLogger [main] Starting LezeckastenaApplicationTests on DESKTOP-G5P5HPE with PID 3212 (started by Pavol �olt�s in C:\Users\PavolSoltes\Desktop\VAVA_backend\VAsVA)
+2019-09-02 18:58:07,535 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-09-02 18:58:07,537 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-09-02 18:58:11,476 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-02 18:58:11,876 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 367ms. Found 3 repository interfaces.
+2019-09-02 18:58:14,104 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$62047615] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-02 18:58:14,782 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2019-09-02 18:58:15,183 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2019-09-02 18:58:15,473 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-02 18:58:15,921 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.7.Final}
+2019-09-02 18:58:15,925 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2019-09-02 18:58:16,501 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-02 18:58:22,093 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-09-02 18:58:22,727 INFO org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl [main] HHH000422: Disabling contextual LOB creation as connection was null
+2019-09-02 18:58:23,140 INFO org.hibernate.type.BasicTypeRegistry [main] HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@6dae70f9
+2019-09-02 18:58:29,352 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-02 18:58:31,753 WARN org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter [main] Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2019-09-02 18:58:35,213 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-02 18:58:35,459 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-02 18:58:37,825 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@981d9d2, org.springframework.security.web.context.SecurityContextPersistenceFilter@751b901a, org.springframework.security.web.header.HeaderWriterFilter@2d4f1ddd, org.springframework.security.web.authentication.logout.LogoutFilter@70b0dc92, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@600b3bee, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@943cf5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75f446df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@ad6448e, org.springframework.security.web.session.SessionManagementFilter@151f1734, org.springframework.security.web.access.ExceptionTranslationFilter@63fde7ca, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5b6ec94a]
+2019-09-02 18:58:37,892 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@7568134c, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@28c75c93, org.springframework.security.web.context.SecurityContextPersistenceFilter@50fe5df2, org.springframework.security.web.header.HeaderWriterFilter@5f346355, org.springframework.security.web.authentication.logout.LogoutFilter@43c3354, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@22cf1808, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2fafa9bf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@53fd59d4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@35217e0, org.springframework.security.web.session.SessionManagementFilter@66e62e19, org.springframework.security.web.access.ExceptionTranslationFilter@2daa5092, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@589a4305]
+2019-09-02 18:58:37,942 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@59509393, org.springframework.security.web.context.SecurityContextPersistenceFilter@6bbac73d, org.springframework.security.web.header.HeaderWriterFilter@507fecf3, org.springframework.security.web.authentication.logout.LogoutFilter@345af277, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@96448ee, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e53c6ef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6164b3a2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d6dc2b8, org.springframework.security.web.session.SessionManagementFilter@3f1d4ecf, org.springframework.security.web.access.ExceptionTranslationFilter@7e0b68e5]
+2019-09-02 18:58:38,520 INFO org.springframework.boot.StartupInfoLogger [main] Started LezeckastenaApplicationTests in 32.554 seconds (JVM running for 53.664)
+2019-09-02 18:58:39,321 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-2] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-02 18:58:39,392 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-2] Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-02 18:58:39,394 INFO com.zaxxer.hikari.HikariDataSource [Thread-2] HikariPool-1 - Shutdown initiated...
+2019-09-02 18:58:39,457 INFO com.zaxxer.hikari.HikariDataSource [Thread-2] HikariPool-1 - Shutdown completed.
+2019-09-02 18:59:07,716 INFO org.springframework.boot.StartupInfoLogger [main] Starting LezeckastenaApplication on DESKTOP-G5P5HPE with PID 428 (C:\Users\PavolSoltes\Desktop\VAVA_backend\VAsVA\target\classes started by Pavol Šoltés in C:\Users\PavolSoltes\Desktop\VAVA_backend\VAsVA)
+2019-09-02 18:59:07,721 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-09-02 18:59:07,723 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-09-02 18:59:10,302 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-02 18:59:10,572 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 250ms. Found 3 repository interfaces.
+2019-09-02 18:59:12,388 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$932c4431] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-02 18:59:14,393 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2019-09-02 18:59:14,509 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2019-09-02 18:59:14,569 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-09-02 18:59:14,572 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-09-02 18:59:14,649 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk-11.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\libnvvp;C:\Program Files\Microsoft MPI\Bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Bitnami\wampstack-7.1.23-0\php;C:\ProgramData\ComposerSetup\bin;C:\wamp64\bin\php\php7.2.10;C:\Users\PavolSoltes\AppData\Local\Programs\Python\Python37-32;C:\Program Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Java\jdk-11.0.2\bin;C:\Users\PavolSoltes\AppData\Local\Android\Sdk\platform-tools;C:\Ruby25-x64\bin;C:\Users\PavolSoltes\AppData\Local\Microsoft\WindowsApps;C:\Users\Pavol Šoltés\AppData\Roaming\Composer\vendor\bin;C:\Users\Pavol Šoltés\AppData\Local\Programs\MiKTeX 2.9\miktex\bin\x64\;C:\Users\Pavol Šoltés\AppData\Local\Programs\Python\Python37-32;C:\Users\PavolSoltes\AppData\Roaming\npm;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin;;C:\Program Files\JetBrains\PyCharm Community Edition 2018.3.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.4\bin;;C:\Users\PavolSoltes\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\PavolSoltes\AppData\Local\Pandoc\;.]
+2019-09-02 18:59:15,555 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2019-09-02 18:59:15,649 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 7823 ms
+2019-09-02 18:59:16,698 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2019-09-02 18:59:20,969 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2019-09-02 18:59:21,174 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-02 18:59:21,483 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.7.Final}
+2019-09-02 18:59:21,495 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2019-09-02 18:59:22,063 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-02 18:59:22,554 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-09-02 18:59:22,612 INFO org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl [main] HHH000422: Disabling contextual LOB creation as connection was null
+2019-09-02 18:59:22,630 INFO org.hibernate.type.BasicTypeRegistry [main] HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@1002d192
+2019-09-02 18:59:26,319 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-02 18:59:27,661 WARN org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter [main] Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2019-09-02 18:59:28,753 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-02 18:59:28,890 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-02 18:59:30,169 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3a7d6976, org.springframework.security.web.context.SecurityContextPersistenceFilter@1640a6b5, org.springframework.security.web.header.HeaderWriterFilter@2643ed03, org.springframework.security.web.authentication.logout.LogoutFilter@2dec57c5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@71e89a26, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47fce2c4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@740fccd2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@37c45154, org.springframework.security.web.session.SessionManagementFilter@1ee52741, org.springframework.security.web.access.ExceptionTranslationFilter@782e0844, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6b6939e1]
+2019-09-02 18:59:30,220 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@75b4db22, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@670aac24, org.springframework.security.web.context.SecurityContextPersistenceFilter@64f49b3, org.springframework.security.web.header.HeaderWriterFilter@58c16efd, org.springframework.security.web.authentication.logout.LogoutFilter@51eafec0, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@7c0035dd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@23e3a27f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@70869678, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@23909b3, org.springframework.security.web.session.SessionManagementFilter@8d52313, org.springframework.security.web.access.ExceptionTranslationFilter@775a5a67, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@17344d7]
+2019-09-02 18:59:30,283 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6920fa35, org.springframework.security.web.context.SecurityContextPersistenceFilter@3606eee9, org.springframework.security.web.header.HeaderWriterFilter@294a12b5, org.springframework.security.web.authentication.logout.LogoutFilter@52fed5b7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@530e08a7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e34840f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6792f2c6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@19542115, org.springframework.security.web.session.SessionManagementFilter@628aea61, org.springframework.security.web.access.ExceptionTranslationFilter@6b286640]
+2019-09-02 18:59:30,595 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2019-09-02 18:59:31,626 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2019-09-02 18:59:31,699 INFO org.springframework.boot.StartupInfoLogger [main] Started LezeckastenaApplication in 25.173 seconds (JVM running for 29.959)
+2019-09-02 19:05:48,823 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-10] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-02 19:05:48,831 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-10] Initializing Servlet 'dispatcherServlet'
+2019-09-02 19:05:48,944 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-10] Completed initialization in 110 ms
+2019-09-02 19:05:49,602 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [http-nio-8080-exec-10] HHH000397: Using ASTQueryTranslatorFactory
+2019-09-02 19:05:50,109 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting password for climber (26).
+2019-09-02 19:05:50,110 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting roles for climber (26).
+2019-09-02 19:05:50,113 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting roles for climber (26).
+2019-09-02 19:05:50,119 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting email for climber (26).
+2019-09-02 19:05:50,311 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting email for climber (26).
+2019-09-02 19:05:50,321 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting email for climber (26).
+2019-09-02 19:05:50,325 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting id (26).
+2019-09-02 19:05:52,247 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting roles for climber (26).
+2019-09-02 19:05:56,640 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-8] Request for a climber received.
+2019-09-02 19:05:56,642 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-8] GET request for climber with id (26) received.
+2019-09-02 19:05:56,648 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-8] Climber found.
+2019-09-02 19:05:56,679 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting id (26).
+2019-09-02 19:05:56,683 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting email for climber (26).
+2019-09-02 19:05:56,685 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting password for climber (26).
+2019-09-02 19:05:56,767 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-8] Getting id (17).
+2019-09-02 19:05:56,768 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-8] Getting id (18).
+2019-09-02 19:05:56,770 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-8] Getting id (19).
+2019-09-02 19:05:56,771 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-8] Getting id (20).
+2019-09-02 19:05:56,782 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting roles for climber (26).
+2019-09-02 19:06:08,829 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-4] Creating new ClimberProblemKey from ids (17) and (26).
+2019-09-02 19:06:09,997 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-3] Creating new ClimberProblemKey from ids (17) and (26).
+2019-09-02 19:06:11,572 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-2] Creating new ClimberProblemKey from ids (17) and (26).
+2019-09-02 19:06:12,740 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-1] Creating new ClimberProblemKey from ids (17) and (26).
+2019-09-02 19:06:18,033 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-5] Creating new ClimberProblemKey from ids (17) and (26).
+2019-09-02 19:06:19,173 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-6] Creating new ClimberProblemKey from ids (17) and (26).
+2019-09-02 19:06:20,022 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-9] Creating new ClimberProblemKey from ids (19) and (26).
+2019-09-02 19:06:21,283 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-10] Creating new ClimberProblemKey from ids (19) and (26).
+2019-09-02 19:06:22,540 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-7] Creating new ClimberProblemKey from ids (18) and (26).
+2019-09-02 19:06:23,510 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-8] Creating new ClimberProblemKey from ids (18) and (26).
+2019-09-02 19:06:24,310 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-4] Creating new ClimberProblemKey from ids (18) and (26).
+2019-09-02 19:06:25,304 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-3] Creating new ClimberProblemKey from ids (18) and (26).
+2019-09-02 19:06:26,119 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-2] Creating new ClimberProblemKey from ids (18) and (26).
+2019-09-02 19:06:27,195 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-1] Creating new ClimberProblemKey from ids (17) and (26).
+2019-09-02 19:06:27,727 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-5] Creating new ClimberProblemKey from ids (17) and (26).
+2019-09-02 19:06:28,199 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-6] Creating new ClimberProblemKey from ids (17) and (26).
+2019-09-02 19:06:28,713 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-9] Creating new ClimberProblemKey from ids (17) and (26).
+2019-09-02 19:06:29,171 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-10] Creating new ClimberProblemKey from ids (17) and (26).
+2019-09-02 19:06:29,580 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-7] Creating new ClimberProblemKey from ids (17) and (26).
+2019-09-02 19:06:31,629 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-8] Creating new ClimberProblemKey from ids (17) and (26).
+2019-09-02 19:06:34,562 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-4] Creating new ClimberProblemKey from ids (18) and (26).
+2019-09-02 19:06:35,110 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-3] Creating new ClimberProblemKey from ids (18) and (26).
+2019-09-02 19:06:35,607 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-2] Creating new ClimberProblemKey from ids (18) and (26).
+2019-09-02 19:06:36,173 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-1] Creating new ClimberProblemKey from ids (18) and (26).
+2019-09-02 19:06:36,601 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-5] Creating new ClimberProblemKey from ids (18) and (26).
+2019-09-02 19:06:37,065 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-6] Creating new ClimberProblemKey from ids (18) and (26).
+2019-09-02 19:06:37,546 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-9] Creating new ClimberProblemKey from ids (18) and (26).
+2019-09-02 19:06:38,063 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-10] Creating new ClimberProblemKey from ids (18) and (26).
+2019-09-02 19:06:38,546 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-7] Creating new ClimberProblemKey from ids (18) and (26).
+2019-09-02 19:06:38,951 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-8] Creating new ClimberProblemKey from ids (18) and (26).
+2019-09-02 19:06:41,383 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-4] Creating new ClimberProblemKey from ids (18) and (26).
+2019-09-02 19:07:05,141 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting password for climber (26).
+2019-09-02 19:07:05,143 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting roles for climber (26).
+2019-09-02 19:07:05,144 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting roles for climber (26).
+2019-09-02 19:07:05,146 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting email for climber (26).
+2019-09-02 19:07:05,148 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting email for climber (26).
+2019-09-02 19:07:05,149 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting email for climber (26).
+2019-09-02 19:07:05,153 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting id (26).
+2019-09-02 19:07:06,430 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting roles for climber (26).
+2019-09-02 19:07:08,527 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-1] Request for a climber received.
+2019-09-02 19:07:08,529 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-1] GET request for climber with id (26) received.
+2019-09-02 19:07:08,535 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-1] Climber found.
+2019-09-02 19:07:08,537 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting id (26).
+2019-09-02 19:07:08,539 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 19:07:08,540 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting password for climber (26).
+2019-09-02 19:07:08,546 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-1] Getting id (19).
+2019-09-02 19:07:08,548 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-1] Getting id (20).
+2019-09-02 19:07:08,548 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-1] Getting id (17).
+2019-09-02 19:07:08,550 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-1] Getting id (18).
+2019-09-02 19:07:08,553 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting roles for climber (26).
+2019-09-02 19:08:06,249 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-6] Request for a climber update received.
+2019-09-02 19:08:06,251 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-6] PUT request for climber update with id (26) received.
+2019-09-02 19:08:06,252 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting id (26).
+2019-09-02 19:08:06,255 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting email for climber (26).
+2019-09-02 19:08:06,256 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting password for climber (26).
+2019-09-02 19:08:06,257 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting roles for climber (26).
+2019-09-02 19:08:06,319 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-6] Request body contents: (Climber(id=26, name=Pavol Šoltés, email=Aa, password={noop}1111, bio=Aa, age=22, sex=F, contact=, grade=V- top rope, nickname=Palinko, status=Married, setProblems=null, myProblems=null, myImages=[IMG_20190815_101016.jpg, IMG_20190901_152511.jpg, IMG_20190831_113233.jpg, IMG_20190815_094521.jpg], roles=[], profilePicPath=null))
+2019-09-02 19:08:06,325 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting email for climber (26).
+2019-09-02 19:08:06,331 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting id (26).
+2019-09-02 19:08:45,755 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting id (26).
+2019-09-02 19:44:49,516 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting password for climber (26).
+2019-09-02 19:44:49,545 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting roles for climber (26).
+2019-09-02 19:44:49,547 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting roles for climber (26).
+2019-09-02 19:44:49,551 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting email for climber (26).
+2019-09-02 19:44:49,566 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting email for climber (26).
+2019-09-02 19:44:49,572 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting email for climber (26).
+2019-09-02 19:44:49,574 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting id (26).
+2019-09-02 19:44:51,111 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting roles for climber (26).
+2019-09-02 19:44:55,441 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-2] Request for a climber received.
+2019-09-02 19:44:55,444 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-2] GET request for climber with id (26) received.
+2019-09-02 19:44:55,459 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-2] Climber found.
+2019-09-02 19:44:55,464 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting id (26).
+2019-09-02 19:44:55,469 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting email for climber (26).
+2019-09-02 19:44:55,473 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting password for climber (26).
+2019-09-02 19:44:55,505 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-2] Getting id (19).
+2019-09-02 19:44:55,508 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-2] Getting id (20).
+2019-09-02 19:44:55,510 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-2] Getting id (17).
+2019-09-02 19:44:55,512 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-2] Getting id (18).
+2019-09-02 19:44:55,528 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting roles for climber (26).
+2019-09-02 19:50:00,436 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting password for climber (26).
+2019-09-02 19:50:00,438 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting roles for climber (26).
+2019-09-02 19:50:00,440 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting roles for climber (26).
+2019-09-02 19:50:00,441 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting email for climber (26).
+2019-09-02 19:50:00,443 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting email for climber (26).
+2019-09-02 19:50:00,445 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting email for climber (26).
+2019-09-02 19:50:00,447 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting id (26).
+2019-09-02 19:50:02,185 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting roles for climber (26).
+2019-09-02 19:50:04,913 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-7] Request for a climber received.
+2019-09-02 19:50:04,915 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-7] GET request for climber with id (26) received.
+2019-09-02 19:50:04,921 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-7] Climber found.
+2019-09-02 19:50:04,923 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting id (26).
+2019-09-02 19:50:04,925 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting email for climber (26).
+2019-09-02 19:50:04,926 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting password for climber (26).
+2019-09-02 19:50:04,933 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-7] Getting id (19).
+2019-09-02 19:50:04,935 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-7] Getting id (20).
+2019-09-02 19:50:04,936 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-7] Getting id (17).
+2019-09-02 19:50:04,944 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-7] Getting id (18).
+2019-09-02 19:50:04,961 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting roles for climber (26).
+2019-09-02 19:50:59,528 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting password for climber (26).
+2019-09-02 19:50:59,531 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting roles for climber (26).
+2019-09-02 19:50:59,532 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting roles for climber (26).
+2019-09-02 19:50:59,533 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting email for climber (26).
+2019-09-02 19:50:59,535 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting email for climber (26).
+2019-09-02 19:50:59,536 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting email for climber (26).
+2019-09-02 19:50:59,537 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting id (26).
+2019-09-02 19:51:00,859 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting roles for climber (26).
+2019-09-02 19:51:03,655 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-3] Request for a climber received.
+2019-09-02 19:51:03,657 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-3] GET request for climber with id (26) received.
+2019-09-02 19:51:03,665 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-3] Climber found.
+2019-09-02 19:51:03,668 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting id (26).
+2019-09-02 19:51:03,670 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting email for climber (26).
+2019-09-02 19:51:03,671 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting password for climber (26).
+2019-09-02 19:51:03,681 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-3] Getting id (19).
+2019-09-02 19:51:03,686 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-3] Getting id (20).
+2019-09-02 19:51:03,687 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-3] Getting id (17).
+2019-09-02 19:51:03,688 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-3] Getting id (18).
+2019-09-02 19:51:03,691 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting roles for climber (26).
+2019-09-02 19:51:56,807 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting password for climber (26).
+2019-09-02 19:51:56,810 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting roles for climber (26).
+2019-09-02 19:51:56,812 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting roles for climber (26).
+2019-09-02 19:51:56,813 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 19:51:56,816 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 19:51:56,817 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 19:51:56,820 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting id (26).
+2019-09-02 19:51:58,233 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting roles for climber (26).
+2019-09-02 19:52:00,436 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-6] Request for a climber received.
+2019-09-02 19:52:00,438 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-6] GET request for climber with id (26) received.
+2019-09-02 19:52:00,445 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-6] Climber found.
+2019-09-02 19:52:00,449 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting id (26).
+2019-09-02 19:52:00,452 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting email for climber (26).
+2019-09-02 19:52:00,455 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting password for climber (26).
+2019-09-02 19:52:00,462 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-6] Getting id (19).
+2019-09-02 19:52:00,464 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-6] Getting id (20).
+2019-09-02 19:52:00,466 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-6] Getting id (17).
+2019-09-02 19:52:00,467 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-6] Getting id (18).
+2019-09-02 19:52:00,470 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting roles for climber (26).
+2019-09-02 19:55:09,575 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting password for climber (26).
+2019-09-02 19:55:09,576 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting roles for climber (26).
+2019-09-02 19:55:09,578 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting roles for climber (26).
+2019-09-02 19:55:09,579 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting email for climber (26).
+2019-09-02 19:55:09,582 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting email for climber (26).
+2019-09-02 19:55:09,584 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting email for climber (26).
+2019-09-02 19:55:09,586 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting id (26).
+2019-09-02 19:55:10,793 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting roles for climber (26).
+2019-09-02 19:55:13,587 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-4] Request for a climber received.
+2019-09-02 19:55:13,589 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-4] GET request for climber with id (26) received.
+2019-09-02 19:55:13,601 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-4] Climber found.
+2019-09-02 19:55:13,604 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting id (26).
+2019-09-02 19:55:13,605 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting email for climber (26).
+2019-09-02 19:55:13,607 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting password for climber (26).
+2019-09-02 19:55:13,615 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-4] Getting id (19).
+2019-09-02 19:55:13,616 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-4] Getting id (20).
+2019-09-02 19:55:13,618 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-4] Getting id (17).
+2019-09-02 19:55:13,620 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-4] Getting id (18).
+2019-09-02 19:55:13,622 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting roles for climber (26).
+2019-09-02 19:55:46,755 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-1] Request for a climber update received.
+2019-09-02 19:55:46,757 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-1] PUT request for climber update with id (26) received.
+2019-09-02 19:55:46,758 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting id (26).
+2019-09-02 19:55:46,760 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 19:55:46,761 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting password for climber (26).
+2019-09-02 19:55:46,762 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting roles for climber (26).
+2019-09-02 19:55:46,769 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-1] Request body contents: (Climber(id=26, name=Pavol Šoltés, email=Aa, password={noop}1111, bio=Aa, age=22, sex=F, contact=, grade=, nickname=Palinko, status=Married, setProblems=null, myProblems=null, myImages=[IMG_20190815_101016.jpg, IMG_20190901_152511.jpg, IMG_20190831_113233.jpg, IMG_20190815_094521.jpg, IMG_20190901_212346.jpg], roles=[], profilePicPath=IMG_20190901_152511.jpg))
+2019-09-02 19:55:46,774 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 19:55:46,779 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting id (26).
+2019-09-02 19:55:58,313 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-5] Request for a climber update received.
+2019-09-02 19:55:58,314 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-5] PUT request for climber update with id (26) received.
+2019-09-02 19:55:58,315 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting id (26).
+2019-09-02 19:55:58,316 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting email for climber (26).
+2019-09-02 19:55:58,318 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting password for climber (26).
+2019-09-02 19:55:58,319 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting roles for climber (26).
+2019-09-02 19:55:58,320 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-5] Request body contents: (Climber(id=26, name=Pavol Šoltés, email=Aa, password={noop}1111, bio=Aa, age=22, sex=F, contact=, grade=, nickname=Palinko, status=Married, setProblems=null, myProblems=null, myImages=[IMG_20190815_101016.jpg, IMG_20190901_152511.jpg, IMG_20190831_113233.jpg, IMG_20190815_094521.jpg, IMG_20190901_212346.jpg], roles=[], profilePicPath=IMG_20190815_101016.jpg))
+2019-09-02 19:55:58,324 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting email for climber (26).
+2019-09-02 19:55:58,326 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting id (26).
+2019-09-02 19:56:05,837 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-6] Request for a climber update received.
+2019-09-02 19:56:05,839 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-6] PUT request for climber update with id (26) received.
+2019-09-02 19:56:05,840 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting id (26).
+2019-09-02 19:56:05,841 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting email for climber (26).
+2019-09-02 19:56:05,842 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting password for climber (26).
+2019-09-02 19:56:05,843 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting roles for climber (26).
+2019-09-02 19:56:05,843 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-6] Request body contents: (Climber(id=26, name=Pavol Šoltés, email=Aa, password={noop}1111, bio=Aa, age=22, sex=F, contact=, grade=, nickname=Palinko, status=Married, setProblems=null, myProblems=null, myImages=[IMG_20190815_101016.jpg, IMG_20190901_152511.jpg, IMG_20190831_113233.jpg, IMG_20190815_094521.jpg, IMG_20190901_212346.jpg], roles=[], profilePicPath=IMG_20190901_152511.jpg))
+2019-09-02 19:56:05,846 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting email for climber (26).
+2019-09-02 19:56:05,847 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting id (26).
+2019-09-02 19:57:34,889 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting password for climber (26).
+2019-09-02 19:57:34,892 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting roles for climber (26).
+2019-09-02 19:57:34,893 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting roles for climber (26).
+2019-09-02 19:57:34,895 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting email for climber (26).
+2019-09-02 19:57:34,897 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting email for climber (26).
+2019-09-02 19:57:34,900 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting email for climber (26).
+2019-09-02 19:57:34,901 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting id (26).
+2019-09-02 19:57:36,626 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting roles for climber (26).
+2019-09-02 19:57:40,552 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-4] Request for a climber received.
+2019-09-02 19:57:40,554 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-4] GET request for climber with id (26) received.
+2019-09-02 19:57:40,558 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-4] Climber found.
+2019-09-02 19:57:40,560 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting id (26).
+2019-09-02 19:57:40,562 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting email for climber (26).
+2019-09-02 19:57:40,563 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting password for climber (26).
+2019-09-02 19:57:40,570 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-4] Getting id (19).
+2019-09-02 19:57:40,572 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-4] Getting id (20).
+2019-09-02 19:57:40,573 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-4] Getting id (17).
+2019-09-02 19:57:40,575 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-4] Getting id (18).
+2019-09-02 19:57:40,578 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting roles for climber (26).
+2019-09-02 19:57:51,681 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-3] Request for a climber update received.
+2019-09-02 19:57:51,683 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-3] PUT request for climber update with id (26) received.
+2019-09-02 19:57:51,685 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting id (26).
+2019-09-02 19:57:51,686 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting email for climber (26).
+2019-09-02 19:57:51,689 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting password for climber (26).
+2019-09-02 19:57:51,690 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting roles for climber (26).
+2019-09-02 19:57:51,691 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-3] Request body contents: (Climber(id=26, name=Pavol Šoltés, email=Aa, password={noop}1111, bio=Aa, age=22, sex=F, contact=, grade=, nickname=Palinko, status=Married, setProblems=null, myProblems=null, myImages=[IMG_20190815_101016.jpg, IMG_20190901_152511.jpg, IMG_20190831_113233.jpg, IMG_20190815_094521.jpg, IMG_20190901_212346.jpg], roles=[], profilePicPath=IMG_20190815_101016.jpg))
+2019-09-02 19:57:51,694 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting email for climber (26).
+2019-09-02 19:57:51,696 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting id (26).
+2019-09-02 20:00:14,169 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-1] Request for a climber update received.
+2019-09-02 20:00:14,169 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-1] PUT request for climber update with id (26) received.
+2019-09-02 20:00:14,169 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting id (26).
+2019-09-02 20:00:14,180 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 20:00:14,180 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting password for climber (26).
+2019-09-02 20:00:14,183 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting roles for climber (26).
+2019-09-02 20:00:14,183 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-1] Request body contents: (Climber(id=26, name=Pavol Šoltés, email=Aa, password={noop}1111, bio=Aa, age=22, sex=F, contact=, grade=, nickname=Palinko, status=Married, setProblems=null, myProblems=null, myImages=[IMG_20190815_101016.jpg, IMG_20190901_152511.jpg, IMG_20190831_113233.jpg, IMG_20190815_094521.jpg, IMG_20190901_212346.jpg], roles=[], profilePicPath=IMG_20190901_152511.jpg))
+2019-09-02 20:00:14,220 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 20:00:14,220 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting id (26).
+2019-09-02 20:04:44,381 INFO org.springframework.boot.StartupInfoLogger [main] Starting LezeckastenaApplicationTests on DESKTOP-G5P5HPE with PID 14264 (started by Pavol �olt�s in C:\Users\PavolSoltes\Desktop\VAVA_backend\VAsVA)
+2019-09-02 20:04:44,385 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-09-02 20:04:44,388 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-09-02 20:04:48,769 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-02 20:04:49,093 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 292ms. Found 3 repository interfaces.
+2019-09-02 20:04:51,018 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f4e2b4cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-02 20:04:51,861 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2019-09-02 20:04:52,306 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2019-09-02 20:04:52,521 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-02 20:04:52,851 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.7.Final}
+2019-09-02 20:04:52,856 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2019-09-02 20:04:53,559 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-02 20:04:55,128 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-09-02 20:04:55,166 INFO org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl [main] HHH000422: Disabling contextual LOB creation as connection was null
+2019-09-02 20:04:55,181 INFO org.hibernate.type.BasicTypeRegistry [main] HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@67d8faec
+2019-09-02 20:04:58,561 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-02 20:05:01,906 WARN org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter [main] Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2019-09-02 20:05:06,440 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-02 20:05:06,704 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-02 20:05:10,094 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@981d9d2, org.springframework.security.web.context.SecurityContextPersistenceFilter@751b901a, org.springframework.security.web.header.HeaderWriterFilter@2d4f1ddd, org.springframework.security.web.authentication.logout.LogoutFilter@70b0dc92, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@600b3bee, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@943cf5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75f446df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@ad6448e, org.springframework.security.web.session.SessionManagementFilter@151f1734, org.springframework.security.web.access.ExceptionTranslationFilter@63fde7ca, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5b6ec94a]
+2019-09-02 20:05:10,144 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@341c0dfc, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7e0b68e5, org.springframework.security.web.context.SecurityContextPersistenceFilter@50fe5df2, org.springframework.security.web.header.HeaderWriterFilter@5f346355, org.springframework.security.web.authentication.logout.LogoutFilter@43c3354, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@28c75c93, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2fafa9bf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@53fd59d4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@507fecf3, org.springframework.security.web.session.SessionManagementFilter@66e62e19, org.springframework.security.web.access.ExceptionTranslationFilter@2daa5092, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@63218586]
+2019-09-02 20:05:10,162 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6c6c93f8, org.springframework.security.web.context.SecurityContextPersistenceFilter@55cf5626, org.springframework.security.web.header.HeaderWriterFilter@1d6dc2b8, org.springframework.security.web.authentication.logout.LogoutFilter@3fc7abf6, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1016b44e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8de8b07, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7b55f0a6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@38e88e13, org.springframework.security.web.session.SessionManagementFilter@7ec75228, org.springframework.security.web.access.ExceptionTranslationFilter@59509393]
+2019-09-02 20:05:10,875 INFO org.springframework.boot.StartupInfoLogger [main] Started LezeckastenaApplicationTests in 28.134 seconds (JVM running for 35.784)
+2019-09-02 20:05:11,511 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-2] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-02 20:05:11,537 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-2] Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-02 20:05:11,542 INFO com.zaxxer.hikari.HikariDataSource [Thread-2] HikariPool-1 - Shutdown initiated...
+2019-09-02 20:05:11,582 INFO com.zaxxer.hikari.HikariDataSource [Thread-2] HikariPool-1 - Shutdown completed.
+2019-09-02 20:05:41,047 INFO org.springframework.boot.StartupInfoLogger [main] Starting LezeckastenaApplication on DESKTOP-G5P5HPE with PID 7696 (C:\Users\PavolSoltes\Desktop\VAVA_backend\VAsVA\target\classes started by Pavol Šoltés in C:\Users\PavolSoltes\Desktop\VAVA_backend\VAsVA)
+2019-09-02 20:05:41,053 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-09-02 20:05:41,054 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-09-02 20:05:43,409 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-02 20:05:43,593 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 167ms. Found 3 repository interfaces.
+2019-09-02 20:05:44,677 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5de182b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-02 20:05:45,917 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2019-09-02 20:05:45,974 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2019-09-02 20:05:46,006 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-09-02 20:05:46,008 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-09-02 20:05:46,027 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk-11.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\libnvvp;C:\Program Files\Microsoft MPI\Bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Bitnami\wampstack-7.1.23-0\php;C:\ProgramData\ComposerSetup\bin;C:\wamp64\bin\php\php7.2.10;C:\Users\PavolSoltes\AppData\Local\Programs\Python\Python37-32;C:\Program Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Java\jdk-11.0.2\bin;C:\Users\PavolSoltes\AppData\Local\Android\Sdk\platform-tools;C:\Ruby25-x64\bin;C:\Users\PavolSoltes\AppData\Local\Microsoft\WindowsApps;C:\Users\Pavol Šoltés\AppData\Roaming\Composer\vendor\bin;C:\Users\Pavol Šoltés\AppData\Local\Programs\MiKTeX 2.9\miktex\bin\x64\;C:\Users\Pavol Šoltés\AppData\Local\Programs\Python\Python37-32;C:\Users\PavolSoltes\AppData\Roaming\npm;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin;;C:\Program Files\JetBrains\PyCharm Community Edition 2018.3.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.4\bin;;C:\Users\PavolSoltes\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\PavolSoltes\AppData\Local\Pandoc\;.]
+2019-09-02 20:05:46,692 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2019-09-02 20:05:46,695 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5478 ms
+2019-09-02 20:05:47,157 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2019-09-02 20:05:47,570 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2019-09-02 20:05:47,727 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-02 20:05:47,945 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.7.Final}
+2019-09-02 20:05:47,990 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2019-09-02 20:05:48,339 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-02 20:05:48,680 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-09-02 20:05:48,721 INFO org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl [main] HHH000422: Disabling contextual LOB creation as connection was null
+2019-09-02 20:05:48,738 INFO org.hibernate.type.BasicTypeRegistry [main] HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@1d2d8846
+2019-09-02 20:05:50,767 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-02 20:05:51,827 WARN org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter [main] Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2019-09-02 20:05:52,666 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-02 20:05:52,770 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-02 20:05:53,730 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@17344d7, org.springframework.security.web.context.SecurityContextPersistenceFilter@c7a1db6, org.springframework.security.web.header.HeaderWriterFilter@69a3944, org.springframework.security.web.authentication.logout.LogoutFilter@7eb94590, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@52a2e2fb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b6b99c5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3962b216, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@75b4db22, org.springframework.security.web.session.SessionManagementFilter@67216c33, org.springframework.security.web.access.ExceptionTranslationFilter@5b8599c7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c9aeec6]
+2019-09-02 20:05:53,768 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@17a5ae7b, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7e4dddee, org.springframework.security.web.context.SecurityContextPersistenceFilter@3606eee9, org.springframework.security.web.header.HeaderWriterFilter@294a12b5, org.springframework.security.web.authentication.logout.LogoutFilter@52fed5b7, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@68fa8ea5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e34840f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6792f2c6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@183a84f4, org.springframework.security.web.session.SessionManagementFilter@628aea61, org.springframework.security.web.access.ExceptionTranslationFilter@6b286640, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5bed0ff4]
+2019-09-02 20:05:53,772 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e553d60, org.springframework.security.web.context.SecurityContextPersistenceFilter@7f57a7a4, org.springframework.security.web.header.HeaderWriterFilter@57d7c511, org.springframework.security.web.authentication.logout.LogoutFilter@28b7646, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@40239b34, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6dcc7696, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45ac973, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c966488, org.springframework.security.web.session.SessionManagementFilter@811d8d6, org.springframework.security.web.access.ExceptionTranslationFilter@3bf52f8f]
+2019-09-02 20:05:53,920 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2019-09-02 20:05:54,001 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2019-09-02 20:05:54,010 INFO org.springframework.boot.StartupInfoLogger [main] Started LezeckastenaApplication in 14.493 seconds (JVM running for 17.543)
+2019-09-02 20:15:35,764 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-02 20:15:35,767 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2019-09-02 20:15:35,796 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 28 ms
+2019-09-02 20:15:36,234 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [http-nio-8080-exec-1] HHH000397: Using ASTQueryTranslatorFactory
+2019-09-02 20:15:36,473 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting password for climber (26).
+2019-09-02 20:15:36,474 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting roles for climber (26).
+2019-09-02 20:15:36,476 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting roles for climber (26).
+2019-09-02 20:15:36,480 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 20:15:36,648 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 20:15:36,649 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 20:15:36,651 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting id (26).
+2019-09-02 20:15:38,243 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting roles for climber (26).
+2019-09-02 20:15:40,397 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-3] Request for a climber received.
+2019-09-02 20:15:40,398 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-3] GET request for climber with id (26) received.
+2019-09-02 20:15:40,404 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-3] Climber found.
+2019-09-02 20:15:40,424 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting id (26).
+2019-09-02 20:15:40,428 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting email for climber (26).
+2019-09-02 20:15:40,429 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting password for climber (26).
+2019-09-02 20:15:40,452 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-3] Getting id (19).
+2019-09-02 20:15:40,453 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-3] Getting id (20).
+2019-09-02 20:15:40,455 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-3] Getting id (17).
+2019-09-02 20:15:40,456 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-3] Getting id (18).
+2019-09-02 20:15:40,465 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting roles for climber (26).
+2019-09-02 20:15:54,939 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-4] Request for a climber update received.
+2019-09-02 20:15:54,941 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-4] PUT request for climber update with id (26) received.
+2019-09-02 20:15:54,941 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting id (26).
+2019-09-02 20:15:54,942 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting email for climber (26).
+2019-09-02 20:15:54,943 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting password for climber (26).
+2019-09-02 20:15:54,944 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting roles for climber (26).
+2019-09-02 20:15:54,981 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-4] Request body contents: (Climber(id=26, name=Pavol Šoltés, email=Aa, password={noop}1111, bio=Aa, age=22, sex=F, contact=, grade=, nickname=Palinko, status=Married, setProblems=null, myProblems=null, myImages=[IMG_20190815_101016.jpg, IMG_20190901_152511.jpg, IMG_20190831_113233.jpg, IMG_20190815_094521.jpg, IMG_20190901_212346.jpg], roles=[], profilePicPath=IMG_20190815_101016.jpg))
+2019-09-02 20:15:54,987 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting email for climber (26).
+2019-09-02 20:15:54,995 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting id (26).
+2019-09-02 20:16:08,115 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting password for climber (26).
+2019-09-02 20:16:08,117 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting roles for climber (26).
+2019-09-02 20:16:08,118 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting roles for climber (26).
+2019-09-02 20:16:08,119 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting email for climber (26).
+2019-09-02 20:16:08,121 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting email for climber (26).
+2019-09-02 20:16:08,123 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting email for climber (26).
+2019-09-02 20:16:08,124 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting id (26).
+2019-09-02 20:16:09,420 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting roles for climber (26).
+2019-09-02 20:16:11,534 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-7] Request for a climber received.
+2019-09-02 20:16:11,535 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-7] GET request for climber with id (26) received.
+2019-09-02 20:16:11,542 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-7] Climber found.
+2019-09-02 20:16:11,543 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting id (26).
+2019-09-02 20:16:11,545 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting email for climber (26).
+2019-09-02 20:16:11,546 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting password for climber (26).
+2019-09-02 20:16:11,552 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-7] Getting id (19).
+2019-09-02 20:16:11,553 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-7] Getting id (20).
+2019-09-02 20:16:11,555 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-7] Getting id (17).
+2019-09-02 20:16:11,555 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-7] Getting id (18).
+2019-09-02 20:16:11,558 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting roles for climber (26).
+2019-09-02 20:16:53,695 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-8] Request for a climber update received.
+2019-09-02 20:16:53,698 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-8] PUT request for climber update with id (26) received.
+2019-09-02 20:16:53,699 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting id (26).
+2019-09-02 20:16:53,700 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting email for climber (26).
+2019-09-02 20:16:53,701 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting password for climber (26).
+2019-09-02 20:16:53,704 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting roles for climber (26).
+2019-09-02 20:16:53,706 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-8] Request body contents: (Climber(id=26, name=Pavol Šoltés, email=Aa, password={noop}1111, bio=Aa, age=22, sex=F, contact=, grade=V - top rope, nickname=Palinko, status=Married, setProblems=null, myProblems=null, myImages=[IMG_20190815_101016.jpg, IMG_20190901_152511.jpg, IMG_20190831_113233.jpg, IMG_20190815_094521.jpg, IMG_20190901_212346.jpg], roles=[], profilePicPath=IMG_20190815_101016.jpg))
+2019-09-02 20:16:53,711 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting email for climber (26).
+2019-09-02 20:16:53,713 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting id (26).
+2019-09-02 20:17:02,717 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting password for climber (26).
+2019-09-02 20:17:02,718 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting roles for climber (26).
+2019-09-02 20:17:02,720 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting roles for climber (26).
+2019-09-02 20:17:02,721 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting email for climber (26).
+2019-09-02 20:17:02,723 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting email for climber (26).
+2019-09-02 20:17:02,724 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting email for climber (26).
+2019-09-02 20:17:02,725 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting id (26).
+2019-09-02 20:17:03,934 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting roles for climber (26).
+2019-09-02 20:17:06,183 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-1] Request for a climber received.
+2019-09-02 20:17:06,185 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-1] GET request for climber with id (26) received.
+2019-09-02 20:17:06,190 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-1] Climber found.
+2019-09-02 20:17:06,191 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting id (26).
+2019-09-02 20:17:06,193 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 20:17:06,193 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting password for climber (26).
+2019-09-02 20:17:06,200 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-1] Getting id (19).
+2019-09-02 20:17:06,202 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-1] Getting id (20).
+2019-09-02 20:17:06,204 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-1] Getting id (17).
+2019-09-02 20:17:06,205 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-1] Getting id (18).
+2019-09-02 20:17:06,207 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting roles for climber (26).
+2019-09-02 20:18:17,563 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-3] Creating new ClimberProblemKey from ids (17) and (26).
+2019-09-02 20:18:18,653 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-4] Creating new ClimberProblemKey from ids (17) and (26).
+2019-09-02 20:19:31,813 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting password for climber (26).
+2019-09-02 20:19:31,817 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting roles for climber (26).
+2019-09-02 20:19:31,818 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting roles for climber (26).
+2019-09-02 20:19:31,820 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting email for climber (26).
+2019-09-02 20:19:31,824 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting email for climber (26).
+2019-09-02 20:19:31,825 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting email for climber (26).
+2019-09-02 20:19:31,827 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting id (26).
+2019-09-02 20:19:33,415 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting roles for climber (26).
+2019-09-02 20:19:35,825 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-8] Request for a climber received.
+2019-09-02 20:19:35,827 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-8] GET request for climber with id (26) received.
+2019-09-02 20:19:35,832 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-8] Climber found.
+2019-09-02 20:19:35,835 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting id (26).
+2019-09-02 20:19:35,837 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting email for climber (26).
+2019-09-02 20:19:35,838 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting password for climber (26).
+2019-09-02 20:19:35,846 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-8] Getting id (19).
+2019-09-02 20:19:35,849 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-8] Getting id (20).
+2019-09-02 20:19:35,850 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-8] Getting id (17).
+2019-09-02 20:19:35,853 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-8] Getting id (18).
+2019-09-02 20:19:35,860 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting roles for climber (26).
+2019-09-02 20:20:35,582 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting password for climber (26).
+2019-09-02 20:20:35,584 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting roles for climber (26).
+2019-09-02 20:20:35,586 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting roles for climber (26).
+2019-09-02 20:20:35,587 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting email for climber (26).
+2019-09-02 20:20:35,589 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting email for climber (26).
+2019-09-02 20:20:35,591 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting email for climber (26).
+2019-09-02 20:20:35,592 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting id (26).
+2019-09-02 20:20:37,197 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting roles for climber (26).
+2019-09-02 20:20:39,725 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-2] Request for a climber received.
+2019-09-02 20:20:39,727 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-2] GET request for climber with id (26) received.
+2019-09-02 20:20:39,733 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-2] Climber found.
+2019-09-02 20:20:39,735 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting id (26).
+2019-09-02 20:20:39,737 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting email for climber (26).
+2019-09-02 20:20:39,738 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting password for climber (26).
+2019-09-02 20:20:39,743 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-2] Getting id (19).
+2019-09-02 20:20:39,744 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-2] Getting id (20).
+2019-09-02 20:20:39,746 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-2] Getting id (17).
+2019-09-02 20:20:39,746 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-2] Getting id (18).
+2019-09-02 20:20:39,748 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting roles for climber (26).
+2019-09-02 20:21:00,487 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting password for climber (26).
+2019-09-02 20:21:00,489 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting roles for climber (26).
+2019-09-02 20:21:00,489 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting roles for climber (26).
+2019-09-02 20:21:00,490 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting email for climber (26).
+2019-09-02 20:21:00,492 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting email for climber (26).
+2019-09-02 20:21:00,493 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting email for climber (26).
+2019-09-02 20:21:00,494 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting id (26).
+2019-09-02 20:21:02,173 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting roles for climber (26).
+2019-09-02 20:21:03,345 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-6] Request for a climber received.
+2019-09-02 20:21:03,347 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-6] GET request for climber with id (26) received.
+2019-09-02 20:21:03,351 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-6] Climber found.
+2019-09-02 20:21:03,353 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting id (26).
+2019-09-02 20:21:03,354 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting email for climber (26).
+2019-09-02 20:21:03,356 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting password for climber (26).
+2019-09-02 20:21:03,362 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-6] Getting id (19).
+2019-09-02 20:21:03,363 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-6] Getting id (20).
+2019-09-02 20:21:03,364 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-6] Getting id (17).
+2019-09-02 20:21:03,366 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-6] Getting id (18).
+2019-09-02 20:21:03,369 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting roles for climber (26).
+2019-09-02 20:21:08,356 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-7] Request for a climber update received.
+2019-09-02 20:21:08,358 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-7] PUT request for climber update with id (26) received.
+2019-09-02 20:21:08,359 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting id (26).
+2019-09-02 20:21:08,359 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting email for climber (26).
+2019-09-02 20:21:08,360 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting password for climber (26).
+2019-09-02 20:21:08,361 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting roles for climber (26).
+2019-09-02 20:21:08,364 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-7] Request body contents: (Climber(id=26, name=Pavol Šoltés, email=Aa, password={noop}1111, bio=Aa, age=22, sex=F, contact=, grade=, nickname=Palinko, status=Married, setProblems=null, myProblems=null, myImages=[IMG_20190815_101016.jpg, IMG_20190901_152511.jpg, IMG_20190831_113233.jpg, IMG_20190815_094521.jpg, IMG_20190901_212346.jpg], roles=[], profilePicPath=IMG_20190815_101016.jpg))
+2019-09-02 20:21:08,368 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting email for climber (26).
+2019-09-02 20:21:08,369 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting id (26).
+2019-09-02 20:27:35,401 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting password for climber (26).
+2019-09-02 20:27:35,412 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting roles for climber (26).
+2019-09-02 20:27:35,412 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting roles for climber (26).
+2019-09-02 20:27:35,412 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting email for climber (26).
+2019-09-02 20:27:35,412 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting email for climber (26).
+2019-09-02 20:27:35,412 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting email for climber (26).
+2019-09-02 20:27:35,412 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting id (26).
+2019-09-02 20:27:36,713 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting roles for climber (26).
+2019-09-02 20:27:39,251 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-1] Request for a climber received.
+2019-09-02 20:27:39,260 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-1] GET request for climber with id (26) received.
+2019-09-02 20:27:39,260 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-1] Climber found.
+2019-09-02 20:27:39,260 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting id (26).
+2019-09-02 20:27:39,260 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 20:27:39,270 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting password for climber (26).
+2019-09-02 20:27:39,270 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-1] Getting id (19).
+2019-09-02 20:27:39,270 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-1] Getting id (20).
+2019-09-02 20:27:39,270 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-1] Getting id (17).
+2019-09-02 20:27:39,281 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-1] Getting id (18).
+2019-09-02 20:27:39,281 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting roles for climber (26).
+2019-09-02 20:34:52,520 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting password for climber (26).
+2019-09-02 20:34:52,520 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting roles for climber (26).
+2019-09-02 20:34:52,520 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting roles for climber (26).
+2019-09-02 20:34:52,531 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting email for climber (26).
+2019-09-02 20:34:52,531 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting email for climber (26).
+2019-09-02 20:34:52,531 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting email for climber (26).
+2019-09-02 20:34:52,531 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting id (26).
+2019-09-02 20:34:54,101 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting roles for climber (26).
+2019-09-02 20:34:56,137 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-5] Request for a climber received.
+2019-09-02 20:34:56,139 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-5] GET request for climber with id (26) received.
+2019-09-02 20:34:56,145 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-5] Climber found.
+2019-09-02 20:34:56,147 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting id (26).
+2019-09-02 20:34:56,149 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting email for climber (26).
+2019-09-02 20:34:56,150 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting password for climber (26).
+2019-09-02 20:34:56,156 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-5] Getting id (19).
+2019-09-02 20:34:56,157 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-5] Getting id (20).
+2019-09-02 20:34:56,158 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-5] Getting id (17).
+2019-09-02 20:34:56,159 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-5] Getting id (18).
+2019-09-02 20:34:56,162 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting roles for climber (26).
+2019-09-02 20:36:07,564 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting password for climber (26).
+2019-09-02 20:36:07,564 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting roles for climber (26).
+2019-09-02 20:36:07,564 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting roles for climber (26).
+2019-09-02 20:36:07,570 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting email for climber (26).
+2019-09-02 20:36:07,573 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting email for climber (26).
+2019-09-02 20:36:07,574 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting email for climber (26).
+2019-09-02 20:36:07,576 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting id (26).
+2019-09-02 20:36:08,820 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting roles for climber (26).
+2019-09-02 20:36:12,160 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-9] Request for a climber received.
+2019-09-02 20:36:12,160 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-9] GET request for climber with id (26) received.
+2019-09-02 20:36:12,171 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-9] Climber found.
+2019-09-02 20:36:12,171 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting id (26).
+2019-09-02 20:36:12,171 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting email for climber (26).
+2019-09-02 20:36:12,171 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting password for climber (26).
+2019-09-02 20:36:12,183 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-9] Getting id (19).
+2019-09-02 20:36:12,183 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-9] Getting id (20).
+2019-09-02 20:36:12,183 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-9] Getting id (17).
+2019-09-02 20:36:12,183 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-9] Getting id (18).
+2019-09-02 20:36:12,190 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting roles for climber (26).
+2019-09-02 20:37:18,350 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting password for climber (26).
+2019-09-02 20:37:18,350 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting roles for climber (26).
+2019-09-02 20:37:18,350 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting roles for climber (26).
+2019-09-02 20:37:18,350 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 20:37:18,350 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 20:37:18,360 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 20:37:18,360 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting id (26).
+2019-09-02 20:37:19,899 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting roles for climber (26).
+2019-09-02 20:37:22,870 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-3] Request for a climber received.
+2019-09-02 20:37:22,870 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-3] GET request for climber with id (26) received.
+2019-09-02 20:37:22,880 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-3] Climber found.
+2019-09-02 20:37:22,880 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting id (26).
+2019-09-02 20:37:22,880 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting email for climber (26).
+2019-09-02 20:37:22,880 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting password for climber (26).
+2019-09-02 20:37:22,890 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-3] Getting id (19).
+2019-09-02 20:37:22,890 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-3] Getting id (20).
+2019-09-02 20:37:22,890 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-3] Getting id (17).
+2019-09-02 20:37:22,890 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-3] Getting id (18).
+2019-09-02 20:37:22,890 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting roles for climber (26).
+2019-09-02 20:38:11,830 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting password for climber (26).
+2019-09-02 20:38:11,830 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting roles for climber (26).
+2019-09-02 20:38:11,830 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting roles for climber (26).
+2019-09-02 20:38:11,830 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting email for climber (26).
+2019-09-02 20:38:11,840 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting email for climber (26).
+2019-09-02 20:38:11,840 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting email for climber (26).
+2019-09-02 20:38:11,840 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting id (26).
+2019-09-02 20:38:13,124 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting roles for climber (26).
+2019-09-02 20:38:15,620 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-6] Request for a climber received.
+2019-09-02 20:38:15,620 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-6] GET request for climber with id (26) received.
+2019-09-02 20:38:15,630 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-6] Climber found.
+2019-09-02 20:38:15,630 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting id (26).
+2019-09-02 20:38:15,630 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting email for climber (26).
+2019-09-02 20:38:15,630 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting password for climber (26).
+2019-09-02 20:38:15,640 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-6] Getting id (19).
+2019-09-02 20:38:15,640 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-6] Getting id (20).
+2019-09-02 20:38:15,640 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-6] Getting id (17).
+2019-09-02 20:38:15,640 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-6] Getting id (18).
+2019-09-02 20:38:15,640 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting roles for climber (26).
+2019-09-02 20:39:55,564 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting password for climber (26).
+2019-09-02 20:39:55,564 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting roles for climber (26).
+2019-09-02 20:39:55,564 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting roles for climber (26).
+2019-09-02 20:39:55,564 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting email for climber (26).
+2019-09-02 20:39:55,570 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting email for climber (26).
+2019-09-02 20:39:55,570 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting email for climber (26).
+2019-09-02 20:39:55,574 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting id (26).
+2019-09-02 20:39:57,200 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting roles for climber (26).
+2019-09-02 20:39:58,417 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-1] Request for a climber received.
+2019-09-02 20:39:58,417 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-1] GET request for climber with id (26) received.
+2019-09-02 20:39:58,420 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-1] Climber found.
+2019-09-02 20:39:58,420 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting id (26).
+2019-09-02 20:39:58,420 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 20:39:58,420 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting password for climber (26).
+2019-09-02 20:39:58,430 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-1] Getting id (19).
+2019-09-02 20:39:58,430 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-1] Getting id (20).
+2019-09-02 20:39:58,430 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-1] Getting id (17).
+2019-09-02 20:39:58,430 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-1] Getting id (18).
+2019-09-02 20:39:58,430 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting roles for climber (26).
+2019-09-02 20:40:51,185 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting password for climber (26).
+2019-09-02 20:40:51,185 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting roles for climber (26).
+2019-09-02 20:40:51,185 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting roles for climber (26).
+2019-09-02 20:40:51,185 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting email for climber (26).
+2019-09-02 20:40:51,195 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting email for climber (26).
+2019-09-02 20:40:51,195 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting email for climber (26).
+2019-09-02 20:40:51,195 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting id (26).
+2019-09-02 20:40:52,425 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting roles for climber (26).
+2019-09-02 20:40:55,075 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-4] Request for a climber received.
+2019-09-02 20:40:55,075 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-4] GET request for climber with id (26) received.
+2019-09-02 20:40:55,075 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-4] Climber found.
+2019-09-02 20:40:55,085 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting id (26).
+2019-09-02 20:40:55,085 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting email for climber (26).
+2019-09-02 20:40:55,085 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting password for climber (26).
+2019-09-02 20:40:55,085 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-4] Getting id (19).
+2019-09-02 20:40:55,095 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-4] Getting id (20).
+2019-09-02 20:40:55,095 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-4] Getting id (17).
+2019-09-02 20:40:55,095 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-4] Getting id (18).
+2019-09-02 20:40:55,095 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting roles for climber (26).
+2019-09-02 20:41:00,610 TRACE vava.soltesvasko.lezeckastena.Data.ClimberProblemKey [http-nio-8080-exec-6] Creating new ClimberProblemKey from ids (17) and (26).
+2019-09-02 20:42:42,955 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting password for climber (26).
+2019-09-02 20:42:42,955 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting roles for climber (26).
+2019-09-02 20:42:42,955 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting roles for climber (26).
+2019-09-02 20:42:42,965 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting email for climber (26).
+2019-09-02 20:42:42,965 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting email for climber (26).
+2019-09-02 20:42:42,965 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting email for climber (26).
+2019-09-02 20:42:42,965 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting id (26).
+2019-09-02 20:42:44,539 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting roles for climber (26).
+2019-09-02 20:42:46,515 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-10] Request for a climber received.
+2019-09-02 20:42:46,515 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-10] GET request for climber with id (26) received.
+2019-09-02 20:42:46,515 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-10] Climber found.
+2019-09-02 20:42:46,525 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting id (26).
+2019-09-02 20:42:46,525 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting email for climber (26).
+2019-09-02 20:42:46,525 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting password for climber (26).
+2019-09-02 20:42:46,532 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-10] Getting id (19).
+2019-09-02 20:42:46,534 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-10] Getting id (20).
+2019-09-02 20:42:46,534 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-10] Getting id (18).
+2019-09-02 20:42:46,534 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-10] Getting id (17).
+2019-09-02 20:42:46,534 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting roles for climber (26).
+2019-09-02 20:43:57,313 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting password for climber (26).
+2019-09-02 20:43:57,316 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting roles for climber (26).
+2019-09-02 20:43:57,317 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting roles for climber (26).
+2019-09-02 20:43:57,318 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting email for climber (26).
+2019-09-02 20:43:57,321 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting email for climber (26).
+2019-09-02 20:43:57,324 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting email for climber (26).
+2019-09-02 20:43:57,325 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting id (26).
+2019-09-02 20:43:58,598 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting roles for climber (26).
+2019-09-02 20:44:00,968 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-4] Request for a climber received.
+2019-09-02 20:44:00,970 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-4] GET request for climber with id (26) received.
+2019-09-02 20:44:00,976 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-4] Climber found.
+2019-09-02 20:44:00,977 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting id (26).
+2019-09-02 20:44:00,979 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting email for climber (26).
+2019-09-02 20:44:00,980 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting password for climber (26).
+2019-09-02 20:44:00,985 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-4] Getting id (19).
+2019-09-02 20:44:00,988 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-4] Getting id (20).
+2019-09-02 20:44:00,991 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-4] Getting id (18).
+2019-09-02 20:44:00,993 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-4] Getting id (17).
+2019-09-02 20:44:00,995 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-4] Getting roles for climber (26).
+2019-09-02 20:45:26,998 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting password for climber (26).
+2019-09-02 20:45:27,000 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting roles for climber (26).
+2019-09-02 20:45:27,001 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting roles for climber (26).
+2019-09-02 20:45:27,002 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting email for climber (26).
+2019-09-02 20:45:27,005 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting email for climber (26).
+2019-09-02 20:45:27,007 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting email for climber (26).
+2019-09-02 20:45:27,008 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting id (26).
+2019-09-02 20:45:28,554 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting roles for climber (26).
+2019-09-02 20:45:30,532 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-8] Request for a climber received.
+2019-09-02 20:45:30,534 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-8] GET request for climber with id (26) received.
+2019-09-02 20:45:30,540 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-8] Climber found.
+2019-09-02 20:45:30,543 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting id (26).
+2019-09-02 20:45:30,545 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting email for climber (26).
+2019-09-02 20:45:30,548 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting password for climber (26).
+2019-09-02 20:45:30,563 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-8] Getting id (19).
+2019-09-02 20:45:30,564 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-8] Getting id (20).
+2019-09-02 20:45:30,566 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-8] Getting id (18).
+2019-09-02 20:45:30,569 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-8] Getting id (17).
+2019-09-02 20:45:30,574 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting roles for climber (26).
+2019-09-02 20:45:35,349 INFO vava.soltesvasko.lezeckastena.Controllers.LoggingController [http-nio-8080-exec-9] ajajaj
+2019-09-02 20:46:29,689 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting password for climber (26).
+2019-09-02 20:46:29,690 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting roles for climber (26).
+2019-09-02 20:46:29,692 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting roles for climber (26).
+2019-09-02 20:46:29,693 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 20:46:29,695 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 20:46:29,697 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting email for climber (26).
+2019-09-02 20:46:29,699 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-1] Getting id (26).
+2019-09-02 20:46:31,528 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-2] Getting roles for climber (26).
+2019-09-02 20:46:33,698 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-3] Request for a climber received.
+2019-09-02 20:46:33,700 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-3] GET request for climber with id (26) received.
+2019-09-02 20:46:33,704 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-3] Climber found.
+2019-09-02 20:46:33,710 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting id (26).
+2019-09-02 20:46:33,712 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting email for climber (26).
+2019-09-02 20:46:33,725 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting password for climber (26).
+2019-09-02 20:46:33,747 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-3] Getting id (19).
+2019-09-02 20:46:33,749 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-3] Getting id (20).
+2019-09-02 20:46:33,750 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-3] Getting id (18).
+2019-09-02 20:46:33,752 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-3] Getting id (17).
+2019-09-02 20:46:33,774 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-3] Getting roles for climber (26).
+2019-09-02 20:47:44,954 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting password for climber (26).
+2019-09-02 20:47:44,955 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting roles for climber (26).
+2019-09-02 20:47:44,958 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting roles for climber (26).
+2019-09-02 20:47:44,961 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting email for climber (26).
+2019-09-02 20:47:44,962 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting email for climber (26).
+2019-09-02 20:47:44,964 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting email for climber (26).
+2019-09-02 20:47:44,967 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-8] Getting id (26).
+2019-09-02 20:47:46,300 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-10] Getting roles for climber (26).
+2019-09-02 20:47:48,693 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-9] Request for a climber received.
+2019-09-02 20:47:48,695 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-9] GET request for climber with id (26) received.
+2019-09-02 20:47:48,700 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-9] Climber found.
+2019-09-02 20:47:48,701 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting id (26).
+2019-09-02 20:47:48,703 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting email for climber (26).
+2019-09-02 20:47:48,704 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting password for climber (26).
+2019-09-02 20:47:48,711 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-9] Getting id (17).
+2019-09-02 20:47:48,712 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-9] Getting id (18).
+2019-09-02 20:47:48,712 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-9] Getting id (19).
+2019-09-02 20:47:48,714 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-9] Getting id (20).
+2019-09-02 20:47:48,716 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-9] Getting roles for climber (26).
+2019-09-02 20:47:53,150 INFO vava.soltesvasko.lezeckastena.Controllers.LoggingController [http-nio-8080-exec-1] pingundefined
+2019-09-02 20:48:54,519 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting password for climber (26).
+2019-09-02 20:48:54,520 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting roles for climber (26).
+2019-09-02 20:48:54,522 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting roles for climber (26).
+2019-09-02 20:48:54,523 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting email for climber (26).
+2019-09-02 20:48:54,525 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting email for climber (26).
+2019-09-02 20:48:54,526 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting email for climber (26).
+2019-09-02 20:48:54,530 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-5] Getting id (26).
+2019-09-02 20:48:56,099 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-6] Getting roles for climber (26).
+2019-09-02 20:48:58,469 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-7] Request for a climber received.
+2019-09-02 20:48:58,471 DEBUG vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-7] GET request for climber with id (26) received.
+2019-09-02 20:48:58,477 INFO vava.soltesvasko.lezeckastena.Controllers.ClimberController [http-nio-8080-exec-7] Climber found.
+2019-09-02 20:48:58,480 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting id (26).
+2019-09-02 20:48:58,484 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting email for climber (26).
+2019-09-02 20:48:58,485 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting password for climber (26).
+2019-09-02 20:48:58,489 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-7] Getting id (17).
+2019-09-02 20:48:58,491 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-7] Getting id (18).
+2019-09-02 20:48:58,492 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-7] Getting id (19).
+2019-09-02 20:48:58,494 TRACE vava.soltesvasko.lezeckastena.Data.Problem [http-nio-8080-exec-7] Getting id (20).
+2019-09-02 20:48:58,497 TRACE vava.soltesvasko.lezeckastena.Data.Climber [http-nio-8080-exec-7] Getting roles for climber (26).

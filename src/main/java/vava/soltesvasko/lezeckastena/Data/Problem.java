@@ -28,7 +28,7 @@ public class Problem {
     private double maximumOverhangDegree;
     @ManyToOne
     @JoinColumn(name="setter_id", referencedColumnName = "id")
-    @JsonIgnoreProperties({"setProblems", "myProblems"})
+    @JsonIgnoreProperties({"setProblems", "myProblems"}) // bráni cykleniu
     private Climber setter;
     @OneToMany(mappedBy = "problem", cascade = CascadeType.ALL, orphanRemoval = true)
     @Setter
